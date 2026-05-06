@@ -78,7 +78,7 @@ export function Blog() {
             {categories.map((category) => (
               <button
                 key={category}
-                className="px-6 py-2 rounded-full font-medium bg-gray-100 text-gray-700 hover:bg-brand-brown hover:text-white transition-colors"
+                className="px-6 py-2 rounded-full font-medium bg-white/10 text-white hover:bg-brand-brown hover:text-white transition-colors"
               >
                 {category}
               </button>
@@ -87,7 +87,7 @@ export function Blog() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
@@ -106,7 +106,7 @@ export function Blog() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                  <div className="flex items-center gap-4 text-sm text-white/60 mb-3">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       {post.date}
@@ -116,10 +116,10 @@ export function Blog() {
                       {post.author}
                     </div>
                   </div>
-                  <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-brown transition-colors">
+                  <h2 className="text-xl font-bold text-white mb-3 group-hover:text-brand-brown transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-white/80 mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
                   <button className="text-brand-brown font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
@@ -134,10 +134,10 @@ export function Blog() {
 
       <section className="py-16 bg-brand-grey">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Stay Updated
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-white/80 mb-8">
             Subscribe to our newsletter for the latest insights on specialty agricultural commodities and sustainable trade practices.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">

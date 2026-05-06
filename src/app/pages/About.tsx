@@ -46,16 +46,16 @@ export function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl font-bold text-white mb-6">
                 Who We Are
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-white mb-6">
                 M R EXIM is a leading Indian firm specializing in the trade of specialty agricultural commodities. Based in Kolkata, we serve quality-conscious markets across South East Asia and beyond.
               </p>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-white mb-6">
                 Our business is built on three core pillars: sustainable sourcing, professional services, and farm-centric relationships. We work directly with farmers and farming communities to ensure the highest quality products while promoting sustainable agricultural practices.
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-white">
                 As both importers and exporters, we bridge the gap between local producers and global markets, ensuring that quality ethnic spices and specialty agricultural products reach consumers worldwide.
               </p>
             </div>
@@ -88,21 +88,21 @@ export function About() {
       <section className="py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-brand-grey p-8 rounded-xl shadow-sm">
+            <div className="bg-white/5 p-8 rounded-xl border border-white/10 shadow-sm">
               <div className="w-16 h-16 bg-brand-brown rounded-lg flex items-center justify-center text-white mb-6">
                 <Target className="w-8 h-8" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
-              <p className="text-lg text-gray-600">
+              <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>
+              <p className="text-lg text-white">
                 To connect premium specialty agricultural commodities from sustainable farms to quality-conscious global markets, while empowering farming communities and promoting ethical trade practices.
               </p>
             </div>
-            <div className="bg-brand-grey p-8 rounded-xl shadow-sm">
+            <div className="bg-white/5 p-8 rounded-xl border border-white/10 shadow-sm">
               <div className="w-16 h-16 bg-brand-brown rounded-lg flex items-center justify-center text-white mb-6">
                 <Eye className="w-8 h-8" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
-              <p className="text-lg text-gray-600">
+              <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>
+              <p className="text-lg text-white">
                 To be the most trusted partner in specialty agricultural commodity trading, recognized for our commitment to quality, sustainability, and community-driven growth across global markets.
               </p>
             </div>
@@ -113,8 +113,8 @@ export function About() {
       <section className="py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
+            <p className="text-xl text-white max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </div>
@@ -122,15 +122,15 @@ export function About() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="p-6 bg-brand-grey border border-gray-200 rounded-xl hover:shadow-xl transition-shadow text-center"
+                className="p-6 bg-white/5 border border-white/10 rounded-xl hover:shadow-xl transition-shadow text-center"
               >
-                <div className="w-16 h-16 bg-amber-100 rounded-lg flex items-center justify-center text-brand-brown mb-4 mx-auto">
+                <div className="w-16 h-16 bg-brand-brown/10 rounded-lg flex items-center justify-center text-brand-brown mb-4 mx-auto">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-white mb-3">
                   {value.title}
                 </h3>
-                <p className="text-gray-600">{value.description}</p>
+                <p className="text-white">{value.description}</p>
               </div>
             ))}
           </div>
@@ -162,7 +162,7 @@ export function About() {
       <section className="py-20 bg-brand-grey">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-brand-grey p-8 rounded-xl">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">
               Leadership
             </h2>
             <div className="flex items-center justify-center gap-6">
@@ -170,9 +170,9 @@ export function About() {
                 SM
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900">Shoshi Mitra</h3>
+                <h3 className="text-2xl font-bold text-white">Shoshi Mitra</h3>
                 <p className="text-lg text-brand-brown mb-2">Board of Directors</p>
-                <p className="text-gray-600">
+                <p className="text-white">
                   Leading M R EXIM with a vision for sustainable growth and global excellence
                 </p>
               </div>

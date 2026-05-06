@@ -44,7 +44,7 @@ export function Home() {
         />
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Premium Specialty Agricultural Commodities
+            Naturally grown loved worldwide
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-100">
             Connecting farms to global markets with quality, sustainability, and trust
@@ -58,7 +58,7 @@ export function Home() {
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white text-gray-900 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
+              className="px-8 py-4 bg-brand-brown text-white hover:opacity-90 rounded-lg font-semibold transition-colors"
             >
               Get in Touch
             </Link>
@@ -74,7 +74,7 @@ export function Home() {
                 <div className="text-4xl md:text-5xl font-bold text-brand-brown mb-2">
                   {stat.value}
                 </div>
-                <div className="text-gray-700 font-medium">{stat.label}</div>
+                <div className="text-white font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -84,10 +84,10 @@ export function Home() {
       <section className="py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose M R EXIM?
             </h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+            <p className="text-xl text-white max-w-2xl mx-auto">
               Your trusted partner in specialty agricultural commodities trading
             </p>
           </div>
@@ -96,15 +96,15 @@ export function Home() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="p-6 bg-white/50 border border-gray-300 rounded-xl hover:shadow-xl transition-shadow"
+                className="p-6 bg-white/10 border border-white/20 rounded-xl hover:shadow-xl transition-shadow"
               >
                 <div className="w-16 h-16 bg-brand-brown/10 rounded-lg flex items-center justify-center text-brand-brown mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-700">{feature.description}</p>
+                <p className="text-white">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -146,7 +146,7 @@ export function Home() {
               </ul>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-brand-grey text-brand-brown rounded-lg font-semibold hover:bg-white transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-colors"
               >
                 Learn More About Us <ArrowRight className="w-5 h-5" />
               </Link>
@@ -169,10 +169,10 @@ export function Home() {
 
       <section className="py-20 bg-brand-grey shadow-inner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Partner With Us?
           </h2>
-          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Get in touch today to discuss your specialty agricultural commodity needs
           </p>
           <Link

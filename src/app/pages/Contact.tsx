@@ -46,12 +46,12 @@ export function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <div className="bg-brand-grey border border-gray-200 rounded-xl p-8 shadow-sm">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-8 shadow-sm">
+                <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                         Full Name *
                       </label>
                       <input
@@ -60,12 +60,12 @@ export function Contact() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                         placeholder="John Doe"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                         Email Address *
                       </label>
                       <input
@@ -74,7 +74,7 @@ export function Contact() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -82,7 +82,7 @@ export function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
                         Phone Number
                       </label>
                       <input
@@ -90,12 +90,12 @@ export function Contact() {
                         id="phone"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                         placeholder="+91 12345 67890"
                       />
                     </div>
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
                         Company Name
                       </label>
                       <input
@@ -103,14 +103,14 @@ export function Contact() {
                         id="company"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                         placeholder="Your Company"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="inquiryType" className="block text-sm font-medium text-white mb-2">
                       Inquiry Type *
                     </label>
                     <select
@@ -118,7 +118,7 @@ export function Contact() {
                       required
                       value={formData.inquiryType}
                       onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                     >
                       <option value="general">General Inquiry</option>
                       <option value="product">Product Information</option>
@@ -130,7 +130,7 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                       Message *
                     </label>
                     <textarea
@@ -139,7 +139,7 @@ export function Contact() {
                       rows={6}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                       placeholder="Please provide details about your inquiry..."
                     />
                   </div>
@@ -156,14 +156,14 @@ export function Contact() {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-brand-grey border border-gray-200 rounded-xl p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Contact Information</h3>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-white mb-4">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <MapPin className="w-6 h-6 text-brand-brown flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-medium text-gray-900">Address</div>
-                      <div className="text-gray-600 text-sm">
+                      <div className="font-medium text-white">Address</div>
+                      <div className="text-white/80 text-sm">
                         P 209, Lake Town - Block B<br />
                         Kolkata - 700089<br />
                         West Bengal, India
@@ -173,7 +173,7 @@ export function Contact() {
                   <div className="flex items-start gap-3">
                     <Phone className="w-6 h-6 text-brand-brown flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-medium text-gray-900">Phone</div>
+                      <div className="font-medium text-white">Phone</div>
                       <a href="tel:8334049664" className="text-brand-brown hover:underline text-sm">
                         +91 8334049664
                       </a>
@@ -182,7 +182,7 @@ export function Contact() {
                   <div className="flex items-start gap-3">
                     <Mail className="w-6 h-6 text-brand-brown flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-medium text-gray-900">Email</div>
+                      <div className="font-medium text-white">Email</div>
                       <a href="mailto:mrexim2026@gmail.com" className="text-brand-brown hover:underline text-sm">
                         mrexim2026@gmail.com
                       </a>
@@ -191,8 +191,8 @@ export function Contact() {
                   <div className="flex items-start gap-3">
                     <Clock className="w-6 h-6 text-brand-brown flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-medium text-gray-900">Business Hours</div>
-                      <div className="text-gray-600 text-sm">
+                      <div className="font-medium text-white">Business Hours</div>
+                      <div className="text-white/80 text-sm">
                         Monday - Friday: 9:00 AM - 6:00 PM<br />
                         Saturday: 9:00 AM - 2:00 PM<br />
                         Sunday: Closed
@@ -212,18 +212,18 @@ export function Contact() {
                 </p>
                 <button
                   onClick={handleWhatsApp}
-                  className="w-full px-6 py-3 bg-brand-grey text-green-700 rounded-lg font-semibold hover:bg-green-50 transition-colors flex items-center justify-center gap-2"
+                  className="w-full px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-colors flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Chat on WhatsApp
                 </button>
               </div>
 
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Leadership Contact</h3>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-white mb-3">Leadership Contact</h3>
                 <div className="space-y-2">
-                  <div className="text-gray-900 font-medium">Shoshi Mitra</div>
-                  <div className="text-sm text-gray-600">Board of Directors</div>
+                  <div className="text-white font-medium">Shoshi Mitra</div>
+                  <div className="text-sm text-white/80">Board of Directors</div>
                   <div className="text-sm text-brand-brown">Available for partnership discussions</div>
                 </div>
               </div>
@@ -232,14 +232,14 @@ export function Contact() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-brand-grey border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Location</h2>
-            <p className="text-lg text-gray-600">Visit us at our office in Kolkata</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Our Location</h2>
+            <p className="text-lg text-white/80">Visit us at our office in Kolkata</p>
           </div>
-          <div className="bg-gray-300 rounded-xl overflow-hidden h-96 flex items-center justify-center">
-            <div className="text-center text-gray-600">
+          <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden h-96 flex items-center justify-center">
+            <div className="text-center text-white/60">
               <MapPin className="w-16 h-16 mx-auto mb-4" />
               <p className="text-lg font-medium">Map Integration</p>
               <p className="text-sm">P 209, Lake Town - Block B, Kolkata - 700089</p>

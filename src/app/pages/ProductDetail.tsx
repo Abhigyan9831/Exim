@@ -12,7 +12,7 @@ export function ProductDetail() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Product Not Found</h1>
+          <h1 className="text-3xl font-bold text-white mb-4">Product Not Found</h1>
           <Link to="/products" className="text-amber-700 hover:underline">
             ← Back to Products
           </Link>
@@ -27,7 +27,7 @@ export function ProductDetail() {
 
   return (
     <div>
-      <section className="bg-white border-b border-gray-200">
+      <section className="bg-brand-grey border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <button
             onClick={() => navigate(-1)}
@@ -39,7 +39,7 @@ export function ProductDetail() {
         </div>
       </section>
 
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-4">
@@ -53,26 +53,26 @@ export function ProductDetail() {
             </div>
 
             <div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              <h1 className="text-4xl font-bold text-white mb-4">
                 {product.name}
               </h1>
-              <p className="text-xl text-gray-600 mb-6">
+              <p className="text-xl text-white mb-6">
                 {product.description}
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-start gap-3 p-4 bg-amber-50 rounded-lg">
-                  <MapPin className="w-6 h-6 text-amber-700 flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-3 p-4 bg-white/5 rounded-lg border border-white/10">
+                  <MapPin className="w-6 h-6 text-brand-brown flex-shrink-0 mt-1" />
                   <div>
-                    <div className="font-semibold text-gray-900">Origin</div>
-                    <div className="text-gray-600">{product.origin}</div>
+                    <div className="font-semibold text-white">Origin</div>
+                    <div className="text-white/80">{product.origin}</div>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-amber-50 rounded-lg">
-                  <Package className="w-6 h-6 text-amber-700 flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-3 p-4 bg-white/5 rounded-lg border border-white/10">
+                  <Package className="w-6 h-6 text-brand-brown flex-shrink-0 mt-1" />
                   <div>
-                    <div className="font-semibold text-gray-900">Packaging</div>
-                    <div className="text-gray-600">{product.packaging.join(", ")}</div>
+                    <div className="font-semibold text-white">Packaging</div>
+                    <div className="text-white/80">{product.packaging.join(", ")}</div>
                   </div>
                 </div>
               </div>
@@ -80,17 +80,17 @@ export function ProductDetail() {
               <div className="space-y-6">
                 {product.specifications && (
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                      <FileText className="w-6 h-6 text-amber-700" />
+                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                      <FileText className="w-6 h-6 text-brand-brown" />
                       Specifications
                     </h2>
-                    <div className="bg-gray-50 rounded-lg p-6">
+                    <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                       <table className="w-full">
                         <tbody className="divide-y divide-gray-200">
                           {product.specifications.map((spec, index) => (
                             <tr key={index}>
-                              <td className="py-3 font-medium text-gray-900">{spec.label}</td>
-                              <td className="py-3 text-gray-600 text-right">{spec.value}</td>
+                              <td className="py-3 font-medium text-white">{spec.label}</td>
+                              <td className="py-3 text-white/80 text-right">{spec.value}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -100,8 +100,8 @@ export function ProductDetail() {
                 )}
 
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <Award className="w-6 h-6 text-amber-700" />
+                  <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                    <Award className="w-6 h-6 text-brand-brown" />
                     Certifications
                   </h2>
                   <div className="flex flex-wrap gap-2">
@@ -120,12 +120,12 @@ export function ProductDetail() {
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-700 text-white rounded-lg font-semibold hover:bg-amber-800 transition-colors"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-brown text-white rounded-lg font-semibold hover:opacity-90 transition-colors"
                 >
                   <Mail className="w-5 h-5" />
                   Request a Quote
                 </Link>
-                <p className="mt-4 text-sm text-gray-600">
+                <p className="mt-4 text-sm text-white/60">
                   Contact us for pricing, availability, and custom packaging options.
                 </p>
               </div>
@@ -135,9 +135,9 @@ export function ProductDetail() {
       </section>
 
       {relatedProducts.length > 0 && (
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-brand-grey border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Products</h2>
+            <h2 className="text-3xl font-bold text-white mb-8">Related Products</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedProducts.map((relatedProduct) => (
                 <Link
@@ -153,10 +153,10 @@ export function ProductDetail() {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-amber-700 transition-colors">
+                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-brand-brown transition-colors">
                       {relatedProduct.name}
                     </h3>
-                    <p className="text-gray-600 text-sm line-clamp-2">
+                    <p className="text-white/80 text-sm line-clamp-2">
                       {relatedProduct.description}
                     </p>
                   </div>

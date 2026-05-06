@@ -40,8 +40,8 @@ export function Products() {
               />
             </div>
             <div className="flex items-center gap-2">
-              <Filter className="w-5 h-5 text-gray-600" />
-              <span className="text-gray-600">Filter by:</span>
+              <Filter className="w-5 h-5 text-white" />
+              <span className="text-white">Filter by:</span>
             </div>
           </div>
 
@@ -51,7 +51,7 @@ export function Products() {
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 selectedCategory === "all"
                   ? "bg-brand-brown text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  : "bg-white/10 text-white hover:bg-white/20"
               }`}
             >
               All Products
@@ -63,7 +63,7 @@ export function Products() {
                 className={`px-6 py-2 rounded-full font-medium transition-colors ${
                   selectedCategory === category.id
                     ? "bg-brand-brown text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    : "bg-white/10 text-white hover:bg-white/20"
                 }`}
               >
                 {category.icon} {category.name}
@@ -73,11 +73,11 @@ export function Products() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredProducts.length === 0 ? (
             <div className="text-center py-12">
-              <p className="text-xl text-gray-600">No products found matching your criteria.</p>
+              <p className="text-xl text-white">No products found matching your criteria.</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,14 +98,14 @@ export function Products() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-2 group-hover:text-brand-brown transition-colors">
+                    <h3 className="text-2xl font-semibold text-white mb-2 group-hover:text-brand-brown transition-colors">
                       {product.name}
                     </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-2">
+                    <p className="text-white/80 mb-4 line-clamp-2">
                       {product.description}
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">Origin: {product.origin}</span>
+                      <span className="text-sm text-white/60">Origin: {product.origin}</span>
                       <span className="text-brand-brown font-medium group-hover:underline">
                         View Details →
                       </span>
@@ -120,10 +120,10 @@ export function Products() {
 
       <section className="py-16 bg-brand-grey">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Can't Find What You're Looking For?
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-white/80 mb-8">
             We offer custom sourcing for specialty agricultural products. Contact us with your requirements.
           </p>
           <Link

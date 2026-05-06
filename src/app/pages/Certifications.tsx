@@ -84,10 +84,10 @@ export function Certifications() {
       <section className="py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Our Certifications
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               We maintain rigorous certifications to ensure our products meet international quality and safety standards
             </p>
           </div>
@@ -96,9 +96,9 @@ export function Certifications() {
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="bg-brand-grey border-2 border-gray-200 rounded-xl p-8 hover:border-amber-500 hover:shadow-xl transition-all"
+                className="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-brand-brown hover:shadow-xl transition-all"
               >
-                <div className="w-20 h-20 bg-amber-100 rounded-lg flex items-center justify-center text-amber-700 mb-6">
+                <div className="w-20 h-20 bg-brand-brown/10 rounded-lg flex items-center justify-center text-brand-brown mb-6">
                   {cert.icon}
                 </div>
                 <div className="mb-4">
@@ -106,10 +106,10 @@ export function Certifications() {
                     {cert.status}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="text-2xl font-bold text-white mb-3">
                   {cert.name}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-white/80">
                   {cert.description}
                 </p>
               </div>
@@ -121,18 +121,18 @@ export function Certifications() {
       <section className="py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Our Quality Standards
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Beyond certifications, we follow comprehensive quality and ethical standards
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {qualityStandards.map((standard, index) => (
-              <div key={index} className="bg-brand-grey rounded-xl p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <div key={index} className="bg-white/5 border border-white/10 rounded-xl p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-white mb-6">
                   {standard.title}
                 </h3>
                 <ul className="space-y-3">
@@ -143,7 +143,7 @@ export function Certifications() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-gray-700">{point}</span>
+                      <span className="text-white">{point}</span>
                     </li>
                   ))}
                 </ul>
