@@ -8,7 +8,7 @@
   --card-foreground: #ffffff;
   --popover: #030303;
   --popover-foreground: #ffffff;
-  --primary: #C08C39;
+  --primary: #A35C10;
   --primary-foreground: oklch(1 0 0);
   --secondary: #030303;
   --secondary-foreground: #ffffff;
@@ -33,7 +33,7 @@
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #C08C39;
+  --sidebar-primary: #A35C10;
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
@@ -43,7 +43,7 @@
   /* User custom colors */
   --olive-logo: #808000;
   --section-grey: #030303;
-  --brand-brown: #C08C39;
+  --brand-brown: #A35C10;
 }
 
 .dark {
