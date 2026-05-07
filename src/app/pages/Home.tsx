@@ -43,7 +43,7 @@ export function Home() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 uppercase">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Naturally Grown<br />Loved Worldwide
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-100">
