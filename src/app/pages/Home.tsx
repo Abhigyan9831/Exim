@@ -26,12 +26,7 @@ export function Home() {
     }
   ];
 
-  const stats = [
-    { value: "500+", label: "Farm Partners" },
-    { value: "15+", label: "Countries Served" },
-    { value: "20+", label: "Product Categories" },
-    { value: "100%", label: "Quality Certified" }
-  ];
+
 
   return (
     <div>
@@ -66,22 +61,25 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-brand-grey shadow-inner">
+      <section className="py-32 bg-brand-brown">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-brand-brown mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-white font-medium">{stat.label}</div>
-              </div>
-            ))}
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-black mb-8">
+              Welcome to MR Exim
+            </h2>
+            <div className="max-w-4xl mx-auto space-y-6">
+              <p className="text-xl text-black leading-relaxed">
+                M R EXIM specializes in trading premium organic Black Cardamom from India, ensuring quality through ethical sourcing, strict quality control, and strong farmer relationships for authentic, traceable products year-round.
+              </p>
+              <p className="text-xl text-black leading-relaxed">
+                The company offers customized grades, worldwide delivery, flexible payment and shipping terms, while focusing on customer satisfaction, transparent communication, and supporting rural livelihoods.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-brand-grey">
+      <section className="py-32 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -116,39 +114,46 @@ export function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-6">
-                Farm-Centric Relationships
+                Explore Our Products
               </h2>
               <p className="text-xl text-black/90 mb-6">
-                We believe in building lasting partnerships with farmers and communities. Our approach ensures sustainable practices, fair trade, and premium quality products that meet international standards.
+                Discover the authentic taste of the Himalayas with our premium collection of specialty spices, starting with our world-renowned Black Cardamom.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <Award className="w-6 h-6 flex-shrink-0 mt-1" />
                   <div>
-                    <div className="font-semibold text-lg">Quality Conscious</div>
-                    <div className="text-black/80">Meeting the highest international quality standards</div>
+                    <div className="font-semibold text-lg">Premium Quality</div>
+                    <div className="text-black/80">Premium Himalayan Black Cardamom with authentic smoky aroma and rich flavor.</div>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <TrendingUp className="w-6 h-6 flex-shrink-0 mt-1" />
+                  <Leaf className="w-6 h-6 flex-shrink-0 mt-1" />
                   <div>
-                    <div className="font-semibold text-lg">Professional Services</div>
-                    <div className="text-black/80">Expert handling from farm to global markets</div>
+                    <div className="font-semibold text-lg">Traditional Process</div>
+                    <div className="text-black/80">Naturally processed and traditionally smoke-cured for global culinary use.</div>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Globe2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                  <div>
+                    <div className="font-semibold text-lg">Culinary Excellence</div>
+                    <div className="text-black/80">Ideal for stews, broths, braised, and slow-cooked dishes.</div>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Users className="w-6 h-6 flex-shrink-0 mt-1" />
                   <div>
-                    <div className="font-semibold text-lg">Community Support</div>
-                    <div className="text-black/80">Empowering farmers through cooperative initiatives</div>
+                    <div className="font-semibold text-lg">Cultural Heritage</div>
+                    <div className="text-black/80">Cultivated with cultural heritage and supports rural livelihoods.</div>
                   </div>
                 </li>
               </ul>
               <Link
-                to="/about"
+                to="/products"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-colors"
               >
-                Learn More About Us <ArrowRight className="w-5 h-5" />
+                View Full Catalog <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">

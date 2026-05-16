@@ -9,7 +9,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="text-2xl font-bold">M R EXIM</div>
             <p className="text-black/80 text-sm">
-              Indian firm trading in specialty agricultural commodities, catering to quality conscious markets worldwide.
+              Indian firm trading in Himalayan Black Cardamom, catering to quality conscious markets.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-black/80 hover:text-black transition-colors">
