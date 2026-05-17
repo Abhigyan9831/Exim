@@ -1,136 +1,134 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { Search, Filter } from "lucide-react";
-import { products, productCategories } from "../data/products";
+
+// Easily swap these URLs with your custom product image paths once ready
+const PRODUCT_IMAGES = {
+  view1: "https://images.unsplash.com/photo-1702057830533-2afff81a57f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080", // Primary View
+  view2: "https://images.unsplash.com/photo-1758657996330-095d08451cd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"  // Alternative View
+};
 
 export function Products() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const filteredProducts = products.filter(product => {
-    const matchesCategory = selectedCategory === "all" || product.category === selectedCategory;
-    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         product.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  const [activeImage, setActiveImage] = useState(PRODUCT_IMAGES.view1);
 
   return (
     <div>
-      <section className="bg-brand-brown text-black py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-4">Our Products</h1>
-          <p className="text-xl text-black/80">
+      {/* Hero Section - Exact Match with About Page Design */}
+      <section className="relative h-96 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
+        <ImageWithFallback
+          src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxzcGljZXN8ZW58MXx8fHwxNzc3Mzc0ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Our Products Background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">Our Products</h1>
+          <p className="text-xl text-gray-100">
             Premium specialty agricultural commodities from sustainable sources
           </p>
         </div>
       </section>
 
-      <section className="py-12 bg-brand-grey border-b border-gray-200">
+      {/* Interactive Single Product Section - "Who We Are" Style 2-Column Grid Layout */}
+      <section className="py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <div className="relative w-full md:w-96">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search products..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <Filter className="w-5 h-5 text-white" />
-              <span className="text-white">Filter by:</span>
-            </div>
-          </div>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-            <button
-              onClick={() => setSelectedCategory("all")}
-              className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                selectedCategory === "all"
-                  ? "bg-brand-brown text-white"
-                  : "bg-white/10 text-white hover:bg-white/20"
-              }`}
-            >
-              All Products
-            </button>
-            {productCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                  selectedCategory === category.id
-                    ? "bg-brand-brown text-white"
-                    : "bg-white/10 text-white hover:bg-white/20"
-                }`}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Column: Product Information */}
+            <div>
+              <span className="text-brand-brown font-semibold tracking-wider uppercase text-sm block mb-2">
+                Premium Spices
+              </span>
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Premium Himalayan Black Cardamom
+              </h2>
+              <p className="text-lg text-white mb-6 leading-relaxed">
+                Our Himalayan Black Cardamom from India is naturally smoke-cured using traditional drying methods, giving it a rich smoky aroma and bold flavour ideal for stews, broths, braised, and slow-cooked dishes.
+              </p>
+              <p className="text-lg text-white mb-6 leading-relaxed">
+                Grown in the wild Himalayan terrains, each pod reflects cultural heritage, careful farming, and rural livelihoods while adding deep authentic flavour to culinary creations.
+              </p>
+              
+              <div className="mb-8">
+                <p className="text-base text-white/80">
+                  <strong className="text-white">Origin:</strong> Eastern Himalayas, India
+                </p>
+              </div>
+              
+              <Link
+                to="/contact#contact-form"
+                className="inline-flex items-center px-6 py-3 bg-brand-brown text-white font-semibold rounded-lg hover:bg-brand-brown/80 transition-colors shadow-md"
               >
-                {category.icon} {category.name}
-              </button>
-            ))}
+                Inquire Now →
+              </Link>
+            </div>
+            
+            {/* Right Column: Product Image Frame & 2-Grid Thumbnails */}
+            <div className="flex flex-col">
+              <div className="relative h-[432px] w-full">
+                <ImageWithFallback
+                  src={activeImage}
+                  alt="Premium Himalayan Black Cardamom"
+                  className="w-full h-full object-cover rounded-xl shadow-lg border border-white/10 transition-all duration-300"
+                />
+              </div>
+              
+              {/* Row of 2 Small Grids Horizontally for Alternate Views */}
+              <div className="grid grid-cols-2 gap-4 mt-4">
+                <button
+                  onClick={() => setActiveImage(PRODUCT_IMAGES.view1)}
+                  className={`relative h-28 w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
+                    activeImage === PRODUCT_IMAGES.view1
+                      ? "border-brand-brown opacity-100 scale-[0.98] shadow-md"
+                      : "border-white/10 opacity-70 hover:opacity-100"
+                  }`}
+                  aria-label="View primary angle"
+                >
+                  <ImageWithFallback
+                    src={PRODUCT_IMAGES.view1}
+                    alt="Cardamom Primary View"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />
+                </button>
+                
+                <button
+                  onClick={() => setActiveImage(PRODUCT_IMAGES.view2)}
+                  className={`relative h-28 w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
+                    activeImage === PRODUCT_IMAGES.view2
+                      ? "border-brand-brown opacity-100 scale-[0.98] shadow-md"
+                      : "border-white/10 opacity-70 hover:opacity-100"
+                  }`}
+                  aria-label="View alternative angle"
+                >
+                  <ImageWithFallback
+                    src={PRODUCT_IMAGES.view2}
+                    alt="Cardamom Alternative View"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-brand-grey">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {filteredProducts.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-xl text-white">No products found matching your criteria.</p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProducts.map((product) => (
-                <Link
-                  key={product.id}
-                  to={`/products/${product.category}/${product.id}`}
-                  className="bg-brand-grey rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow group"
-                >
-                  <div className="relative h-64 overflow-hidden">
-                    <ImageWithFallback
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 right-4 bg-brand-grey px-3 py-1 rounded-full text-sm font-medium text-brand-brown">
-                      {productCategories.find(c => c.id === product.category)?.icon}
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-2xl font-semibold text-white mb-2 group-hover:text-brand-brown transition-colors">
-                      {product.name}
-                    </h3>
-                    <p className="text-white/80 mb-4 line-clamp-2">
-                      {product.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-white/60">Origin: {product.origin}</span>
-                      <span className="text-brand-brown font-medium group-hover:underline">
-                        View Details →
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-
-      <section className="py-16 bg-brand-grey">
+      {/* Custom Inquiry Section */}
+      <section className="py-20 bg-brand-grey border-t border-white/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Can't Find What You're Looking For?
+            Custom Sourcing & Bulk Orders
           </h2>
           <p className="text-lg text-white/80 mb-8">
-            We offer custom sourcing for specialty agricultural products. Contact us with your requirements.
+            We partner with clients globally for specialty spices and custom grade sourcing.
           </p>
           <Link
-            to="/contact"
-            className="inline-block px-8 py-4 bg-brand-brown text-white rounded-lg font-semibold hover:bg-brand-brown transition-colors"
+            to="/contact#contact-form"
+            className="inline-block px-8 py-4 bg-brand-brown text-white rounded-lg font-semibold hover:bg-brand-brown/80 transition-colors shadow-md"
           >
-            Request a Quote
+            Request custom specifications
           </Link>
         </div>
       </section>

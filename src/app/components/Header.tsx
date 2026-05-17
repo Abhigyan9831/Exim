@@ -11,7 +11,6 @@ export function Header() {
     { name: "About Us", path: "/about" },
     { name: "Products", path: "/products" },
     { name: "Certifications", path: "/certifications" },
-    { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
 

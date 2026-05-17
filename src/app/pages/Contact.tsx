@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Clock, MessageCircle, Send } from "lucide-react";
 
 export function Contact() {
@@ -10,6 +10,18 @@ export function Contact() {
     inquiryType: "general",
     message: ""
   });
+
+  useEffect(() => {
+    if (window.location.hash === "#contact-form") {
+      const element = document.getElementById("contact-form");
+      if (element) {
+        const timer = setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,7 +54,7 @@ export function Contact() {
         </div>
       </section>
 
-      <section className="py-16 bg-brand-grey">
+      <section id="contact-form" className="scroll-mt-20 py-16 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">

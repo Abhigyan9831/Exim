@@ -30,7 +30,6 @@ export function Footer() {
               <li><Link to="/about" className="text-black/80 hover:text-black transition-colors font-medium">About Us</Link></li>
               <li><Link to="/products" className="text-black/80 hover:text-black transition-colors font-medium">Products</Link></li>
               <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">Certifications</Link></li>
-              <li><Link to="/blog" className="text-black/80 hover:text-black transition-colors font-medium">Blog</Link></li>
             </ul>
           </div>
 

@@ -50,35 +50,20 @@ export function About() {
                 Who We Are
               </h2>
               <p className="text-lg text-white mb-6">
-                M R EXIM is a leading Indian firm specializing in the trade of specialty agricultural commodities. Based in Kolkata, we serve quality-conscious markets across South East Asia and beyond.
+                As a spice supplier from India, we offer Black Cardamom sourced from the Himalayan region, known for its rich smoky aroma and bold flavour.
               </p>
               <p className="text-lg text-white mb-6">
-                Our business is built on three core pillars: sustainable sourcing, professional services, and farm-centric relationships. We work directly with farmers and farming communities to ensure the highest quality products while promoting sustainable agricultural practices.
+                Naturally processed and smoke-cured using traditional drying methods, it is ideal for stews, broths, braised foods, and slow-cooked dishes that meet international culinary standards.
               </p>
               <p className="text-lg text-white">
-                As both importers and exporters, we bridge the gap between local producers and global markets, ensuring that quality ethnic spices and specialty agricultural products reach consumers worldwide.
+                Grown in the wild Himalayan terrains, each pod reflects cultural heritage, careful farming practices, and support for rural livelihoods. Its dark pods add a deep smoky essence that enhances dishes with authentic flavour and aroma.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="relative h-[432px] w-full">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1769034283546-96ab6352ba45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxzcGljZXMlMjBjb2xvcmZ1bCUyMG1hcmtldHxlbnwxfHx8fDE3NzczNzQ4OTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Spices display"
-                className="w-full h-48 object-cover rounded-lg"
-              />
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1699210260087-347545f89de6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxzcGljZXMlMjBjb2xvcmZ1bCUyMG1hcmtldHxlbnwxfHx8fDE3NzczNzQ4OTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Colorful spice powders"
-                className="w-full h-48 object-cover rounded-lg mt-8"
-              />
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1702057830533-2afff81a57f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxzcGljZXMlMjBjb2xvcmZ1bCUyMG1hcmtldHxlbnwxfHx8fDE3NzczNzQ4OTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Spices in bags"
-                className="w-full h-48 object-cover rounded-lg"
-              />
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1688278526565-5bb028024473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhZ3JpY3VsdHVyYWwlMjBmYXJtJTIwZmllbGR8ZW58MXx8fHwxNzc3Mzc0ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Wheat field"
-                className="w-full h-48 object-cover rounded-lg mt-8"
+                src="/images/who_we.png"
+                alt="Who We Are - M R EXIM"
+                className="w-full h-full object-cover rounded-xl shadow-lg border border-white/10"
               />
             </div>
           </div>
@@ -139,17 +124,17 @@ export function About() {
 
       <section className="py-20 bg-brand-brown text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">What Makes Us Unique</h2>
-            <div className="space-y-6 text-lg text-amber-100">
+            <div className="space-y-3 text-lg text-amber-100">
               <p>
                 <strong className="text-white">Quality Conscious Markets:</strong> We cater exclusively to markets that value premium quality and sustainable sourcing.
               </p>
               <p>
-                <strong className="text-white">Professional Services:</strong> Our team brings decades of expertise in agricultural commodity trading, ensuring smooth transactions and reliable delivery.
+                <strong className="text-white">Professional Services:</strong> Our decades of trading expertise ensure smooth transactions and highly reliable delivery.
               </p>
               <p>
-                <strong className="text-white">Farm-Centric Relationships:</strong> We work directly with farming communities, fostering long-term partnerships that benefit both producers and consumers.
+                <strong className="text-white">Farm-Centric Relationships:</strong> We partner directly with farming communities to benefit both producers and consumers.
               </p>
               <p>
                 <strong className="text-white">Specialty Focus:</strong> Our expertise in ethnic spices and specialty agricultural categories sets us apart in the market.
