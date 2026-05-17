@@ -88,7 +88,7 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose M R EXIM?
+              Why Choose <span className="text-[#A35C10]">M R EXIM</span>?
             </h2>
             <p className="text-xl text-white max-w-2xl mx-auto">
               Your trusted partner in specialty agricultural commodities trading
