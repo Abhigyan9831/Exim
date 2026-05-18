@@ -17,21 +17,6 @@ export function Certifications() {
       icon: <ShieldCheck className="w-12 h-12" />,
       name: "FSSAI License",
       status: "Active"
-    },
-    {
-      icon: <Users className="w-12 h-12" />,
-      name: "Fair Trade",
-      status: "Certified"
-    },
-    {
-      icon: <Globe2 className="w-12 h-12" />,
-      name: "Export License",
-      status: "Active"
-    },
-    {
-      icon: <FileCheck className="w-12 h-12" />,
-      name: "GMP Certified",
-      status: "Certified"
     }
   ];
 

@@ -66,14 +66,14 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-32 bg-brand-brown">
+      <section className="pt-12 pb-32 bg-brand-brown">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-black mb-12 text-center">
             Welcome to M R Exim
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-xl text-black leading-relaxed text-justify">
+              <p className="text-xl text-black leading-relaxed">
                 At M R EXIM, we are essentially focussed on trading in high-quality organic Black cardamom from India. In order to meet the quality expectations of our clientele, we select the batches through vigorous quality control procedures, ethical sourcing strategies and thereby providing the desired certifications. Our farm-centric relationships with the growers in the remote areas enable us to maintain the authenticity of our products and a steady supply of traceable ingredients throughout the year. In addition to this, we have adopted a customer-centric approach to navigate the market demand to the growers, thus positively impacting rural livelihoods. Our products are applicable across various industries and we provide different grades of black cardamom suited to customised and specific requirements. M R EXIM offers worldwide delivery with FOB, CIF, CNF shipping terms and other flexible mode of payments. We emphasize on transparent communications, quick response times and customised service to build strong and lasting business relationships.
               </p>
             </div>
@@ -88,7 +88,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-32 bg-brand-grey">
+      <section className="pt-12 pb-32 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">

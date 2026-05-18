@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -21,6 +21,9 @@ export function Footer() {
               <a href="#" className="text-black/80 hover:text-black transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
+              <a href="#" className="text-black/80 hover:text-black transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
@@ -39,8 +42,6 @@ export function Footer() {
               <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">ISO 22000:2018</Link></li>
               <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">FSSAI License</Link></li>
               <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">Organic Certification</Link></li>
-              <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">Fair Trade</Link></li>
-              <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">Export License</Link></li>
             </ul>
           </div>
 
