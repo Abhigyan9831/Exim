@@ -41,7 +41,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">ISO 22000:2018</Link></li>
               <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">FSSAI License</Link></li>
-              <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">Organic Certification</Link></li>
+              <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">Apeda</Link></li>
             </ul>
           </div>
 

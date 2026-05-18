@@ -10,7 +10,7 @@ export function Certifications() {
     },
     {
       icon: <Leaf className="w-12 h-12" />,
-      name: "Organic Certification",
+      name: "Apeda",
       status: "Certified"
     },
     {
