@@ -47,14 +47,14 @@ export function Contact() {
     <div>
       <section className="bg-brand-brown text-black py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl text-black/80">
             Get in touch with our team for inquiries, quotes, and partnerships
           </p>
         </div>
       </section>
 
-      <section id="contact-form" className="scroll-mt-20 py-16 bg-brand-grey">
+      <section id="contact-form" className="scroll-mt-20 py-8 md:py-16 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
@@ -244,13 +244,13 @@ export function Contact() {
         </div>
       </section>
 
-      <section className="py-16 bg-brand-grey border-t border-white/10">
+      <section className="py-8 md:py-16 bg-brand-grey border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Location</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Location</h2>
             <p className="text-lg text-white/80">Visit us at our office in Kolkata</p>
           </div>
-          <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden h-96 flex items-center justify-center">
+          <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden h-64 md:h-96 flex items-center justify-center">
             <div className="text-center text-white/60">
               <MapPin className="w-16 h-16 mx-auto mb-4" />
               <p className="text-lg font-medium">Map Integration</p>

@@ -24,17 +24,17 @@ export function Certifications() {
     <div>
       <section className="bg-brand-brown text-black py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-4">Certifications & Quality</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Certifications & Quality</h1>
           <p className="text-xl text-black/80">
             Committed to the highest standards of quality, safety, and sustainability
           </p>
         </div>
       </section>
 
-      <section className="py-20 bg-brand-grey">
+      <section className="py-12 md:py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
               Our Certifications
             </h2>
             <p className="text-xl text-white max-w-3xl mx-auto">
@@ -65,9 +65,9 @@ export function Certifications() {
         </div>
       </section>
 
-      <section className="py-20 bg-brand-grey shadow-inner">
+      <section className="py-12 md:py-20 bg-brand-grey shadow-inner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
             Ready to Partner <span className="text-[#A35C10]">With Us</span>?
           </h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">

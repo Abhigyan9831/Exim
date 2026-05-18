@@ -39,7 +39,7 @@ export function ProductDetail() {
         </div>
       </section>
 
-      <section className="py-12 bg-brand-grey">
+      <section className="py-8 md:py-12 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-4">
@@ -53,7 +53,7 @@ export function ProductDetail() {
             </div>
 
             <div>
-              <h1 className="text-4xl font-bold text-white mb-4">
+              <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">
                 {product.name}
               </h1>
               <p className="text-xl text-white mb-6">
@@ -86,7 +86,7 @@ export function ProductDetail() {
                     </h2>
                     <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                       <table className="w-full">
-                        <tbody className="divide-y divide-gray-200">
+                        <tbody className="divide-y divide-white/10">
                           {product.specifications.map((spec, index) => (
                             <tr key={index}>
                               <td className="py-3 font-medium text-white">{spec.label}</td>
@@ -117,7 +117,7 @@ export function ProductDetail() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-gray-200">
+              <div className="mt-8 pt-8 border-t border-white/10">
                 <Link
                   to="/contact"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-brown text-white rounded-lg font-semibold hover:opacity-90 transition-colors"
@@ -135,9 +135,9 @@ export function ProductDetail() {
       </section>
 
       {relatedProducts.length > 0 && (
-        <section className="py-16 bg-brand-grey border-t border-white/10">
+        <section className="py-8 md:py-16 bg-brand-grey border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-white mb-8">Related Products</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">Related Products</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedProducts.map((relatedProduct) => (
                 <Link

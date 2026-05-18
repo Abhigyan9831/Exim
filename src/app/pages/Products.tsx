@@ -15,7 +15,7 @@ export function Products() {
   return (
     <div>
       {/* Hero Section - Exact Match with About Page Design */}
-      <section className="relative h-96 flex items-center justify-center overflow-hidden">
+      <section className="relative h-64 md:h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxzcGljZXN8ZW58MXx8fHwxNzc3Mzc0ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -31,7 +31,7 @@ export function Products() {
       </section>
 
       {/* Interactive Single Product Section - "Who We Are" Style 2-Column Grid Layout */}
-      <section className="py-20 bg-brand-grey">
+      <section className="py-12 md:py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
@@ -40,7 +40,7 @@ export function Products() {
               <span className="text-brand-brown font-semibold tracking-wider uppercase text-sm block mb-2">
                 Premium Spices
               </span>
-              <h2 className="text-4xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
                 Premium Himalayan Black Cardamom
               </h2>
               <p className="text-lg text-white mb-6 leading-relaxed">
@@ -63,7 +63,7 @@ export function Products() {
             
             {/* Right Column: Product Image Frame & 3-Grid Thumbnails */}
             <div className="flex flex-col">
-              <div className="relative h-[432px] w-full">
+              <div className="relative h-64 md:h-[432px] w-full">
                 <ImageWithFallback
                   src={activeImage}
                   alt="Premium Himalayan Black Cardamom"
@@ -75,7 +75,7 @@ export function Products() {
               <div className="grid grid-cols-3 gap-4 mt-4">
                 <button
                   onClick={() => setActiveImage(PRODUCT_IMAGES.view1)}
-                  className={`relative h-28 w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
+                  className={`relative aspect-square w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
                     activeImage === PRODUCT_IMAGES.view1
                       ? "border-brand-brown opacity-100 scale-[0.98] shadow-md"
                       : "border-white/10 opacity-70 hover:opacity-100"
@@ -92,7 +92,7 @@ export function Products() {
                 
                 <button
                   onClick={() => setActiveImage(PRODUCT_IMAGES.view2)}
-                  className={`relative h-28 w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
+                  className={`relative aspect-square w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
                     activeImage === PRODUCT_IMAGES.view2
                       ? "border-brand-brown opacity-100 scale-[0.98] shadow-md"
                       : "border-white/10 opacity-70 hover:opacity-100"
@@ -109,7 +109,7 @@ export function Products() {
 
                 <button
                   onClick={() => setActiveImage(PRODUCT_IMAGES.view3)}
-                  className={`relative h-28 w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
+                  className={`relative aspect-square w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
                     activeImage === PRODUCT_IMAGES.view3
                       ? "border-brand-brown opacity-100 scale-[0.98] shadow-md"
                       : "border-white/10 opacity-70 hover:opacity-100"
@@ -131,9 +131,9 @@ export function Products() {
       </section>
 
       {/* Custom Inquiry Section */}
-      <section className="py-20 bg-brand-grey border-t border-white/5">
+      <section className="py-12 md:py-20 bg-brand-grey border-t border-white/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Custom Sourcing & Bulk Orders
           </h2>
           <p className="text-lg text-white/80 mb-8">

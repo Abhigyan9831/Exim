@@ -68,7 +68,7 @@ export function MenuItem({ children, onClick, disabled = false, icon, isActive =
     >
       <span className="flex items-center justify-center h-full">
         {icon && (
-          <span className="h-8 w-8 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+          <span className="h-6 w-6 md:h-8 md:w-8 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
             {icon}
           </span>
         )}
@@ -80,8 +80,16 @@ export function MenuItem({ children, onClick, disabled = false, icon, isActive =
 
 export function MenuContainer({ children }: { children: React.ReactNode }) {
   const [isExpanded, setIsExpanded] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const childrenArray = React.Children.toArray(children)
   const totalItems = childrenArray.length
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const handleToggle = () => {
     if (isExpanded) {
@@ -91,14 +99,16 @@ export function MenuContainer({ children }: { children: React.ReactNode }) {
     }
   }
 
+  const gap = isMobile ? 56 : 76
+
   return (
-    <div className="relative w-[64px]" data-expanded={isExpanded}>
+    <div className="relative w-[48px] md:w-[64px]" data-expanded={isExpanded}>
       {/* Container for all items */}
-      <div className="relative h-16">
+      <div className="relative h-12 md:h-16">
         {/* First item - always visible */}
         <div 
-          className={`absolute right-0 top-0 h-16 bg-gray-100 dark:bg-gray-800 cursor-pointer rounded-full group will-change-transform z-50 animate-fade-in transition-all duration-300 flex items-center justify-center overflow-hidden border border-white/10 shadow-lg ${
-            isExpanded ? "w-16" : "md:w-36 w-16"
+          className={`absolute right-0 top-0 h-12 md:h-16 bg-gray-100 dark:bg-gray-800 cursor-pointer rounded-full group will-change-transform z-50 animate-fade-in transition-all duration-300 flex items-center justify-center overflow-hidden border border-white/10 shadow-lg ${
+            isExpanded ? "w-12 md:w-16" : "w-12 md:w-36"
           }`}
           onClick={handleToggle}
         >
@@ -107,13 +117,13 @@ export function MenuContainer({ children }: { children: React.ReactNode }) {
             : childrenArray[0]}
         </div>
 
-        {/* Other items with 12px gap (76px translation) */}
+        {/* Other items with gap - expanding upward */}
         {childrenArray.slice(1).map((child, index) => (
           <div 
             key={index} 
-            className="absolute top-0 left-0 w-16 h-16 bg-gray-100 dark:bg-gray-800 will-change-transform rounded-full border border-white/10 shadow-lg flex items-center justify-center"
+            className="absolute top-0 left-0 w-12 h-12 md:w-16 md:h-16 bg-gray-100 dark:bg-gray-800 will-change-transform rounded-full border border-white/10 shadow-lg flex items-center justify-center"
             style={{
-              transform: `translateY(${isExpanded ? (index + 1) * 76 : 0}px)`,
+              transform: `translateY(${isExpanded ? -(index + 1) * gap : 0}px)`,
               opacity: isExpanded ? 1 : 0,
               zIndex: 40 - index,
               transition: `transform ${isExpanded ? '300ms' : '300ms'} cubic-bezier(0.4, 0, 0.2, 1),

@@ -22,7 +22,7 @@ export function About() {
 
   return (
     <div>
-      <section className="relative h-96 flex items-center justify-center overflow-hidden">
+      <section className="relative h-64 md:h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1628884187093-55e511036c7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxhZ3JpY3VsdHVyYWwlMjBmYXJtJTIwZmllbGR8ZW58MXx8fHwxNzc3Mzc0ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -37,18 +37,18 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-brand-grey">
+      <section className="py-12 md:py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
                 Who We <span className="text-[#A35C10]">Are</span>
               </h2>
               <p className="text-lg text-white">
                 At M R Exim we are essentially focussed on trading in high-quality organic black cardamom from India. In order to meet the quality expectations of our clientele, we select the batches through vigorous quality control procedures, ethical sourcing strategies and thereby providing the desired certifications. Our farm-centric relationships with the growers in the remote areas enable us to maintain the authenticity of our product and a steady supply of traceable ingredients throughout the year. In addition to this, we have adopted a customer-centric approach to navigate the market demand to the growers, thus positively impacting rural livelihoods. Our product is applicable across various industries and we provide different grades of black cardamom suited to customized and specific requirements. M R EXIM offers worldwide delivery with FOB, CIF, CNF shipping terms and other flexible node of payments. We emphasize on transperent communications, quick response times and customised service to build strong and lasting business relationships.
               </p>
             </div>
-            <div className="relative h-[432px] w-full">
+            <div className="relative h-64 md:h-[432px] w-full">
               <ImageWithFallback
                 src="/images/who_we.png"
                 alt="Who We Are - M R EXIM"
@@ -59,14 +59,14 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-brand-grey">
+      <section className="py-12 md:py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-white/5 p-8 rounded-xl border border-white/10 shadow-sm">
               <div className="w-16 h-16 bg-brand-brown rounded-lg flex items-center justify-center text-white mb-6">
                 <Target className="w-8 h-8" />
               </div>
-              <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Mission</h2>
               <p className="text-lg text-white">
                 To deliver mountain grown single-origin Himalayan Black Cardamom from India to global markets, at the same time empowering rural livelihoods.
               </p>
@@ -75,7 +75,7 @@ export function About() {
               <div className="w-16 h-16 bg-brand-brown rounded-lg flex items-center justify-center text-white mb-6">
                 <Eye className="w-8 h-8" />
               </div>
-              <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Vision</h2>
               <p className="text-lg text-white">
                 To connect high altitude black cardamom farms directly with international buyers through sustainability, quality focussed processing and fair trade practices.
               </p>
@@ -84,10 +84,10 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-brand-grey">
+      <section className="py-12 md:py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">Our Core Values</h2>
             <p className="text-xl text-white max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
@@ -111,9 +111,9 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-brand-brown text-black">
+      <section className="py-12 md:py-20 bg-brand-brown text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-12 text-center">What Makes Us Unique</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-12 text-center">What Makes Us Unique</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-lg text-black">
               <p>
@@ -146,14 +146,14 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-brand-grey">
+      <section className="py-12 md:py-20 bg-brand-grey">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-brand-grey p-8 rounded-xl">
-            <h2 className="text-3xl font-bold text-white mb-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
               Leadership
             </h2>
-            <div className="flex items-center justify-center gap-6">
-              <div className="w-24 h-24 bg-brand-olive rounded-full flex items-center justify-center text-white text-3xl font-bold">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left">
+              <div className="w-24 h-24 bg-brand-olive rounded-full flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
                 SM
               </div>
               <div>

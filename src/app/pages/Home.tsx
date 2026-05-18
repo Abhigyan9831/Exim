@@ -66,9 +66,9 @@ export function Home() {
         </div>
       </section>
 
-      <section className="pt-12 pb-32 bg-brand-brown">
+      <section className="pt-8 md:pt-12 pb-16 md:pb-32 bg-brand-brown">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-black mb-12 text-center">
+          <h2 className="text-2xl md:text-4xl font-bold text-black mb-8 md:mb-12 text-center">
             Welcome to M R Exim
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -88,10 +88,10 @@ export function Home() {
         </div>
       </section>
 
-      <section className="pt-12 pb-32 bg-brand-grey">
+      <section className="pt-8 md:pt-12 pb-16 md:pb-32 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
               Why Choose <span className="text-[#A35C10]">M R EXIM</span>?
             </h2>
             <p className="text-xl text-white max-w-2xl mx-auto">
@@ -118,9 +118,9 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-brand-brown text-black">
+      <section className="py-12 md:py-20 bg-brand-brown text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-12 text-center">
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center">
             Our Product
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -169,9 +169,9 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-brand-grey shadow-inner">
+      <section className="py-12 md:py-20 bg-brand-grey shadow-inner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
             Ready to Partner <span className="text-[#A35C10]">With Us</span>?
           </h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
