@@ -1,41 +1,36 @@
-import { Award, ShieldCheck, FileCheck, Leaf, Users, Globe2 } from "lucide-react";
+import { Link } from "react-router";
+import { Award, ShieldCheck, FileCheck, Leaf, Users, Globe2, ArrowRight } from "lucide-react";
 
 export function Certifications() {
   const certifications = [
     {
       icon: <Award className="w-12 h-12" />,
       name: "ISO 22000:2018",
-      description: "Food Safety Management System certification ensuring the highest standards in food safety throughout our supply chain.",
       status: "Certified"
     },
     {
       icon: <Leaf className="w-12 h-12" />,
       name: "Organic Certification",
-      description: "Certified organic products sourced from farms following sustainable and chemical-free farming practices.",
       status: "Certified"
     },
     {
       icon: <ShieldCheck className="w-12 h-12" />,
       name: "FSSAI License",
-      description: "Food Safety and Standards Authority of India certification for safe and quality food products.",
       status: "Active"
     },
     {
       icon: <Users className="w-12 h-12" />,
       name: "Fair Trade",
-      description: "Commitment to fair pricing and ethical trading practices that benefit farming communities.",
       status: "Certified"
     },
     {
       icon: <Globe2 className="w-12 h-12" />,
       name: "Export License",
-      description: "Authorized to export agricultural commodities to international markets with full compliance.",
       status: "Active"
     },
     {
       icon: <FileCheck className="w-12 h-12" />,
       name: "GMP Certified",
-      description: "Good Manufacturing Practices certification ensuring quality control in processing and packaging.",
       status: "Certified"
     }
   ];
@@ -76,43 +71,29 @@ export function Certifications() {
                     {cert.status}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="text-2xl font-bold text-white">
                   {cert.name}
                 </h3>
-                <p className="text-white/80">
-                  {cert.description}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-brand-grey">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-brand-brown text-black rounded-2xl p-12 text-center shadow-lg">
-            <Award className="w-16 h-16 mx-auto mb-6" />
-            <h2 className="text-3xl font-bold mb-4">
-              Quality You Can Trust
-            </h2>
-            <p className="text-xl text-black/80 mb-8">
-              Our certifications and quality standards ensure that every product we deliver meets the highest international benchmarks for safety, sustainability, and ethical sourcing.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-4xl font-bold mb-2">100%</div>
-                <div className="text-black/70 font-medium">Quality Tested</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">6+</div>
-                <div className="text-black/70 font-medium">Certifications</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">500+</div>
-                <div className="text-black/70 font-medium">Farm Partners</div>
-              </div>
-            </div>
-          </div>
+      <section className="py-20 bg-brand-grey shadow-inner">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Partner <span className="text-[#A35C10]">With Us</span>?
+          </h2>
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
+            Get in touch today to discuss your specialty agricultural commodity needs
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-brown text-white rounded-lg font-semibold hover:opacity-90 transition-colors"
+          >
+            Contact Us Now <ArrowRight className="w-5 h-5" />
+          </Link>
         </div>
       </section>
     </div>

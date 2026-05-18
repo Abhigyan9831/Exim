@@ -73,11 +73,8 @@ export function Home() {
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-xl text-black leading-relaxed">
-                M R EXIM specializes in trading premium organic Black Cardamom from India, ensuring quality through ethical sourcing, strict quality control, and strong farmer relationships for authentic, traceable products year-round.
-              </p>
-              <p className="text-xl text-black leading-relaxed">
-                The company offers customized grades, worldwide delivery, flexible payment and shipping terms, while focusing on customer satisfaction, transparent communication, and supporting rural livelihoods.
+              <p className="text-xl text-black leading-relaxed text-justify">
+                At M R EXIM, we are essentially focussed on trading in high-quality organic Black cardamom from India. In order to meet the quality expectations of our clientele, we select the batches through vigorous quality control procedures, ethical sourcing strategies and thereby providing the desired certifications. Our farm-centric relationships with the growers in the remote areas enable us to maintain the authenticity of our products and a steady supply of traceable ingredients throughout the year. In addition to this, we have adopted a customer-centric approach to navigate the market demand to the growers, thus positively impacting rural livelihoods. Our products are applicable across various industries and we provide different grades of black cardamom suited to customised and specific requirements. M R EXIM offers worldwide delivery with FOB, CIF, CNF shipping terms and other flexible mode of payments. We emphasize on transparent communications, quick response times and customised service to build strong and lasting business relationships.
               </p>
             </div>
             <div>
@@ -158,13 +155,13 @@ export function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1688320243376-69b68a8f656f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZ3JpY3VsdHVyYWwlMjBmYXJtJTIwZmllbGR8ZW58MXx8fHwxNzc3Mzc0ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Agricultural farm"
+                src="/images/view1.png"
+                alt="M R EXIM Product View 1"
                 className="w-full h-64 object-cover rounded-lg"
               />
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1761255240953-c571ba0b98d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzcGljZXMlMjBjb2xvcmZ1bCUyMG1hcmtldHxlbnwxfHx8fDE3NzczNzQ4OTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Colorful spices"
+                src="/images/view3.png"
+                alt="M R EXIM Product View 3"
                 className="w-full h-64 object-cover rounded-lg"
               />
             </div>

@@ -4,8 +4,9 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 // Easily swap these URLs with your custom product image paths once ready
 const PRODUCT_IMAGES = {
-  view1: "https://images.unsplash.com/photo-1702057830533-2afff81a57f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080", // Primary View
-  view2: "https://images.unsplash.com/photo-1758657996330-095d08451cd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"  // Alternative View
+  view1: "/images/view1.png", // Primary View
+  view2: "/images/view2.png", // Alternative View 1
+  view3: "/images/view3.png"  // Alternative View 2
 };
 
 export function Products() {
@@ -60,7 +61,7 @@ export function Products() {
               </Link>
             </div>
             
-            {/* Right Column: Product Image Frame & 2-Grid Thumbnails */}
+            {/* Right Column: Product Image Frame & 3-Grid Thumbnails */}
             <div className="flex flex-col">
               <div className="relative h-[432px] w-full">
                 <ImageWithFallback
@@ -70,8 +71,8 @@ export function Products() {
                 />
               </div>
               
-              {/* Row of 2 Small Grids Horizontally for Alternate Views */}
-              <div className="grid grid-cols-2 gap-4 mt-4">
+              {/* Row of 3 Small Grids Horizontally for Alternate Views */}
+              <div className="grid grid-cols-3 gap-4 mt-4">
                 <button
                   onClick={() => setActiveImage(PRODUCT_IMAGES.view1)}
                   className={`relative h-28 w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
@@ -83,7 +84,7 @@ export function Products() {
                 >
                   <ImageWithFallback
                     src={PRODUCT_IMAGES.view1}
-                    alt="Cardamom Primary View"
+                    alt="Cardamom View 1"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />
@@ -100,7 +101,24 @@ export function Products() {
                 >
                   <ImageWithFallback
                     src={PRODUCT_IMAGES.view2}
-                    alt="Cardamom Alternative View"
+                    alt="Cardamom View 2"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />
+                </button>
+
+                <button
+                  onClick={() => setActiveImage(PRODUCT_IMAGES.view3)}
+                  className={`relative h-28 w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
+                    activeImage === PRODUCT_IMAGES.view3
+                      ? "border-brand-brown opacity-100 scale-[0.98] shadow-md"
+                      : "border-white/10 opacity-70 hover:opacity-100"
+                  }`}
+                  aria-label="View third angle"
+                >
+                  <ImageWithFallback
+                    src={PRODUCT_IMAGES.view3}
+                    alt="Cardamom View 3"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />
