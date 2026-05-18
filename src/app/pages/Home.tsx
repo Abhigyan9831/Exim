@@ -54,7 +54,7 @@ export function Home() {
               to="/products"
               className="px-8 py-4 bg-brand-brown hover:opacity-90 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
             >
-              Explore Products <ArrowRight className="w-5 h-5" />
+              Explore Product <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               to="/contact"
