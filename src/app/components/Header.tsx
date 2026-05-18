@@ -9,7 +9,7 @@ export function Header() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Products", path: "/products" },
+    { name: "Product", path: "/products" },
     { name: "Certifications", path: "/certifications" },
     { name: "Contact", path: "/contact" },
   ];
@@ -38,11 +38,10 @@ export function Header() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-2 rounded-md transition-colors ${
-                  isActive(link.path)
+                className={`px-4 py-2 rounded-md transition-colors ${isActive(link.path)
                     ? "bg-brand-brown text-white"
                     : "text-gray-800 hover:bg-brand-brown/10 hover:text-brand-brown"
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
@@ -68,11 +67,10 @@ export function Header() {
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-md transition-colors ${
-                    isActive(link.path)
+                  className={`px-4 py-3 rounded-md transition-colors ${isActive(link.path)
                       ? "bg-brand-brown text-white"
                       : "text-gray-800 hover:bg-brand-brown/10"
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </Link>

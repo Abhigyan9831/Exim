@@ -43,10 +43,7 @@ export function Products() {
                 Premium Himalayan Black Cardamom
               </h2>
               <p className="text-lg text-white mb-6 leading-relaxed">
-                Our Himalayan Black Cardamom from India is naturally smoke-cured using traditional drying methods, giving it a rich smoky aroma and bold flavour ideal for stews, broths, braised, and slow-cooked dishes.
-              </p>
-              <p className="text-lg text-white mb-6 leading-relaxed">
-                Grown in the wild Himalayan terrains, each pod reflects cultural heritage, careful farming, and rural livelihoods while adding deep authentic flavour to culinary creations.
+                As a spice supplier from India, our Black Cardamom is native to the Himalayan region and features a distinct smoky aroma that serves as a crucial ingredient for stews, broths, braised foods and slow cooked dishes. Our Black Cardamom is naturally processed using traditional drying methods and smoke-cured to preserve its authentic smoky aroma and intense taste, ideal for international culinary standards. Growth in the wild Himalyan terrains each pod of cardamom narrates a story of cultural richness and culinary delight. It begins with meticulous farmingg and the cultivation carries a cultural significance which impacts the rural livelihood. The rough dark pods work in the background, creating a robust smoky flavour that perfumes slow-cooked dishes to perfection.
               </p>
               
               <div className="mb-8">

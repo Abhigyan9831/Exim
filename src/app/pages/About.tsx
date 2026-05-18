@@ -47,16 +47,10 @@ export function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">
-                Who We Are
+                Who We <span className="text-[#A35C10]">Are</span>
               </h2>
-              <p className="text-lg text-white mb-6">
-                As a spice supplier from India, we offer Black Cardamom sourced from the Himalayan region, known for its rich smoky aroma and bold flavour.
-              </p>
-              <p className="text-lg text-white mb-6">
-                Naturally processed and smoke-cured using traditional drying methods, it is ideal for stews, broths, braised foods, and slow-cooked dishes that meet international culinary standards.
-              </p>
               <p className="text-lg text-white">
-                Grown in the wild Himalayan terrains, each pod reflects cultural heritage, careful farming practices, and support for rural livelihoods. Its dark pods add a deep smoky essence that enhances dishes with authentic flavour and aroma.
+                At M R Exim we are essentially focussed on trading in high-quality organic black cardamom from India. In order to meet the quality expectations of our clientele, we select the batches through vigorous quality control procedures, ethical sourcing strategies and thereby providing the desired certifications. Our farm-centric relationships with the growers in the remote areas enable us to maintain the authenticity of our product and a steady supply of traceable ingredients throughout the year. In addition to this, we have adopted a customer-centric approach to navigate the market demand to the growers, thus positively impacting rural livelihoods. Our product is applicable across various industries and we provide different grades of black cardamom suited to customized and specific requirements. M R EXIM offers worldwide delivery with FOB, CIF, CNF shipping terms and other flexible node of payments. We emphasize on transperent communications, quick response times and customised service to build strong and lasting business relationships.
               </p>
             </div>
             <div className="relative h-[432px] w-full">
@@ -79,7 +73,7 @@ export function About() {
               </div>
               <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>
               <p className="text-lg text-white">
-                To connect premium specialty agricultural commodities from sustainable farms to quality-conscious global markets, while empowering farming communities and promoting ethical trade practices.
+                To deliver mountain grown single-origin Himalayan Black Cardamom from India to global markets, at the same time empowering rural livelihoods.
               </p>
             </div>
             <div className="bg-white/5 p-8 rounded-xl border border-white/10 shadow-sm">
@@ -88,7 +82,7 @@ export function About() {
               </div>
               <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>
               <p className="text-lg text-white">
-                To be the most trusted partner in specialty agricultural commodity trading, recognized for our commitment to quality, sustainability, and community-driven growth across global markets.
+                To connect high altitude black cardamom farms directly with international buyers through sustainability, quality focussed processing and fair trade practices.
               </p>
             </div>
           </div>
@@ -124,9 +118,9 @@ export function About() {
 
       <section className="py-20 bg-brand-brown text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">What Makes Us Unique</h2>
-            <div className="space-y-3 text-lg text-amber-100">
+          <h2 className="text-4xl font-bold mb-12 text-center">What Makes Us Unique</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 text-lg text-amber-100">
               <p>
                 <strong className="text-white">Quality Conscious Markets:</strong> We cater exclusively to markets that value premium quality and sustainable sourcing.
               </p>
@@ -139,6 +133,19 @@ export function About() {
               <p>
                 <strong className="text-white">Specialty Focus:</strong> Our expertise in ethnic spices and specialty agricultural categories sets us apart in the market.
               </p>
+              <p>
+                <strong className="text-white">Low-Smoke Curing:</strong> Low-smoke curing techniques used to preserve the smoke aroma and authenticity of the product.
+              </p>
+              <p>
+                <strong className="text-white">Traceable Quality:</strong> Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
+              </p>
+            </div>
+            <div>
+              <ImageWithFallback
+                src="/images/unique.png"
+                alt="What Makes Us Unique"
+                className="w-full h-auto object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>

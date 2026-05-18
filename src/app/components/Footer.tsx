@@ -34,13 +34,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Our Focus</h3>
-            <ul className="space-y-2 text-black/80 text-sm font-medium">
-              <li>Sustainable Sourcing</li>
-              <li>Farm-Linked Partnerships</li>
-              <li>Community Farming</li>
-              <li>Ethnic Spices</li>
-              <li>Specialty Categories</li>
+            <h3 className="text-lg font-bold mb-4">Certifications</h3>
+            <ul className="space-y-2">
+              <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">ISO 22000:2018</Link></li>
+              <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">FSSAI License</Link></li>
+              <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">Organic Certification</Link></li>
+              <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">Fair Trade</Link></li>
+              <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">Export License</Link></li>
             </ul>
           </div>
 
@@ -49,7 +49,7 @@ export function Footer() {
             <ul className="space-y-3 text-black/80 text-sm font-medium">
               <li className="flex items-start space-x-2">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>P 209, Lake Town - Block B, Kolkata - 700089</span>
+                <span>P 209, Lake Town - Block B, Kolkata - 700089, West Bengal</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-5 h-5 flex-shrink-0" />

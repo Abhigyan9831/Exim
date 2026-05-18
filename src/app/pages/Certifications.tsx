@@ -40,36 +40,6 @@ export function Certifications() {
     }
   ];
 
-  const qualityStandards = [
-    {
-      title: "Quality Assurance",
-      points: [
-        "Rigorous quality checks at every stage",
-        "Laboratory testing for purity and safety",
-        "Regular audits and inspections",
-        "Traceability from farm to delivery"
-      ]
-    },
-    {
-      title: "Sustainable Practices",
-      points: [
-        "Support for organic farming methods",
-        "Reduction of environmental impact",
-        "Water conservation initiatives",
-        "Biodiversity preservation"
-      ]
-    },
-    {
-      title: "Ethical Trading",
-      points: [
-        "Fair prices to farmers",
-        "Community development programs",
-        "Transparent supply chains",
-        "Worker welfare and safety"
-      ]
-    }
-  ];
-
   return (
     <div>
       <section className="bg-brand-brown text-black py-16">
@@ -112,41 +82,6 @@ export function Certifications() {
                 <p className="text-white/80">
                   {cert.description}
                 </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-brand-grey">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Our Quality Standards
-            </h2>
-            <p className="text-xl text-white max-w-3xl mx-auto">
-              Beyond certifications, we follow comprehensive quality and ethical standards
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {qualityStandards.map((standard, index) => (
-              <div key={index} className="bg-white/5 border border-white/10 rounded-xl p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-white mb-6">
-                  {standard.title}
-                </h3>
-                <ul className="space-y-3">
-                  {standard.points.map((point, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-brand-brown rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
-                        <svg className="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-white">{point}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>

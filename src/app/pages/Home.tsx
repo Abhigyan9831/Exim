@@ -26,8 +26,8 @@ export function Home() {
     },
     {
       icon: <Settings className="w-8 h-8" />,
-      title: "Tailored Solutions",
-      description: "Customized grades, packaging, and shipping terms to meet diverse client requirements."
+      title: "High-Altitude Himalayan Cultivation",
+      description: "We essentially focus on high altitude cultivation of black cardamom (1000-2000m above sea level)."
     }
   ];
 
@@ -35,11 +35,11 @@ export function Home() {
 
   return (
     <div>
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[500px] sm:min-h-[600px] md:h-auto md:aspect-[1672/941] flex items-center justify-center overflow-hidden w-full">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1775769388716-d5507e86abc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGljZXMlMjBjb2xvcmZ1bCUyMG1hcmtldHxlbnwxfHx8fDE3NzczNzQ4OTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Colorful spices"
+          src="/images/who_we.png"
+          alt="Who We Are - M R EXIM"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
@@ -68,17 +68,24 @@ export function Home() {
 
       <section className="py-32 bg-brand-brown">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold text-black mb-8">
-              Welcome to MR Exim
-            </h2>
-            <div className="max-w-4xl mx-auto space-y-6">
+          <h2 className="text-4xl font-bold text-black mb-12 text-center">
+            Welcome to M R Exim
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
               <p className="text-xl text-black leading-relaxed">
                 M R EXIM specializes in trading premium organic Black Cardamom from India, ensuring quality through ethical sourcing, strict quality control, and strong farmer relationships for authentic, traceable products year-round.
               </p>
               <p className="text-xl text-black leading-relaxed">
                 The company offers customized grades, worldwide delivery, flexible payment and shipping terms, while focusing on customer satisfaction, transparent communication, and supporting rural livelihoods.
               </p>
+            </div>
+            <div>
+              <ImageWithFallback
+                src="/images/welcome.png"
+                alt="Welcome to MR Exim"
+                className="w-full h-auto object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
@@ -116,49 +123,37 @@ export function Home() {
 
       <section className="py-20 bg-brand-brown text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-12 text-center">
+            Our Product
+          </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">
-                Explore Our Products
-              </h2>
-              <p className="text-xl text-black/90 mb-6">
-                Discover the authentic taste of the Himalayas with our premium collection of specialty spices, starting with our world-renowned Black Cardamom.
-              </p>
+              <h3 className="text-2xl font-semibold text-black/90 mb-6">
+                Himalayan Black Cardamom
+              </h3>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <Award className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div>
-                    <div className="font-semibold text-lg">Premium Quality</div>
-                    <div className="text-black/80">Premium Himalayan Black Cardamom with authentic smoky aroma and rich flavor.</div>
-                  </div>
+                  <div className="text-black/80">Premium Himalayan Black Cardamom with authentic smoky aroma and rich flavor.</div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Leaf className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div>
-                    <div className="font-semibold text-lg">Traditional Process</div>
-                    <div className="text-black/80">Naturally processed and traditionally smoke-cured for global culinary use.</div>
-                  </div>
+                  <div className="text-black/80">Naturally processed and traditionally smoke-cured for global culinary use.</div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Globe2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div>
-                    <div className="font-semibold text-lg">Culinary Excellence</div>
-                    <div className="text-black/80">Ideal for stews, broths, braised, and slow-cooked dishes.</div>
-                  </div>
+                  <div className="text-black/80">Ideal for stews, broths, braised, and slow-cooked dishes.</div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Users className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div>
-                    <div className="font-semibold text-lg">Cultural Heritage</div>
-                    <div className="text-black/80">Cultivated with cultural heritage and supports rural livelihoods.</div>
-                  </div>
+                  <div className="text-black/80">Cultivated with cultural heritage and supports rural livelihoods.</div>
                 </li>
               </ul>
               <Link
                 to="/products"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-colors"
               >
-                View Full Catalog <ArrowRight className="w-5 h-5" />
+                View More <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -170,7 +165,7 @@ export function Home() {
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1761255240953-c571ba0b98d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzcGljZXMlMjBjb2xvcmZ1bCUyMG1hcmtldHxlbnwxfHx8fDE3NzczNzQ4OTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Colorful spices"
-                className="w-full h-64 object-cover rounded-lg mt-8"
+                className="w-full h-64 object-cover rounded-lg"
               />
             </div>
           </div>
@@ -180,7 +175,7 @@ export function Home() {
       <section className="py-20 bg-brand-grey shadow-inner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Partner With Us?
+            Ready to Partner <span className="text-[#A35C10]">With Us</span>?
           </h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Get in touch today to discuss your specialty agricultural commodity needs
