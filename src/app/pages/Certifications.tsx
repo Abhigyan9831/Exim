@@ -10,12 +10,12 @@ export function Certifications() {
     },
     {
       icon: <Leaf className="w-12 h-12" />,
-      name: "Apeda",
+      name: "APEDA",
       status: "Certified"
     },
     {
       icon: <ShieldCheck className="w-12 h-12" />,
-      name: "FSSAI License",
+      name: "FSSAI",
       status: "Active"
     }
   ];
