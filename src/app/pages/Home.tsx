@@ -113,7 +113,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-3 md:py-4 bg-[#030303] text-white">
+      <section className="py-6 md:py-8 bg-[#030303] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center">
             Our <span className="text-[#A35C10]">Product</span>
