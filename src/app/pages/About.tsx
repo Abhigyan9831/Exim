@@ -6,7 +6,7 @@ export function About() {
     {
       icon: <Award className="w-8 h-8" />,
       title: "Quality Excellence",
-      description: "We maintain the highest standards in every product we source and deliver."
+      description: <>We maintain the highest standards in every product we source and <br />deliver.</>
     },
     {
       icon: <Leaf className="w-8 h-8" />,
