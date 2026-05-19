@@ -75,6 +75,23 @@ export function Products() {
               {/* Row of 4 Small Grids Horizontally for Alternate Views */}
               <div className="grid grid-cols-4 gap-4 mt-4 w-full">
                 <button
+                  onClick={() => setActiveImage(PRODUCT_IMAGES.view4)}
+                  className={`relative aspect-square w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
+                    activeImage === PRODUCT_IMAGES.view4
+                      ? "border-brand-brown opacity-100 scale-[0.98] shadow-md"
+                      : "border-white/10 opacity-70 hover:opacity-100"
+                  }`}
+                  aria-label="View fourth angle"
+                >
+                  <ImageWithFallback
+                    src={PRODUCT_IMAGES.view4}
+                    alt="Cardamom View 4"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />
+                </button>
+
+                <button
                   onClick={() => setActiveImage(PRODUCT_IMAGES.view1)}
                   className={`relative aspect-square w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
                     activeImage === PRODUCT_IMAGES.view1
@@ -120,23 +137,6 @@ export function Products() {
                   <ImageWithFallback
                     src={PRODUCT_IMAGES.view3}
                     alt="Cardamom View 3"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />
-                </button>
-
-                <button
-                  onClick={() => setActiveImage(PRODUCT_IMAGES.view4)}
-                  className={`relative aspect-square w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
-                    activeImage === PRODUCT_IMAGES.view4
-                      ? "border-brand-brown opacity-100 scale-[0.98] shadow-md"
-                      : "border-white/10 opacity-70 hover:opacity-100"
-                  }`}
-                  aria-label="View fourth angle"
-                >
-                  <ImageWithFallback
-                    src={PRODUCT_IMAGES.view4}
-                    alt="Cardamom View 4"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />
