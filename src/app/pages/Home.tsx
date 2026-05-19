@@ -129,12 +129,12 @@ export function Home() {
                   <div className="text-white/80">Naturally processed and traditionally smoke-cured for global culinary use.</div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Users className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div className="text-white/80">Handcrafted with cultural heritage and supports rural livelihoods.</div>
-                </li>
-                <li className="flex items-start gap-3">
                   <Award className="w-6 h-6 flex-shrink-0 mt-1" />
                   <div className="text-white/80">Himalayan Black Cardamom with authentic smoky aroma & rich flavor.</div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Users className="w-6 h-6 flex-shrink-0 mt-1" />
+                  <div className="text-white/80">Handcrafted with cultural heritage and supports rural livelihoods.</div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Globe2 className="w-6 h-6 flex-shrink-0 mt-1" />
