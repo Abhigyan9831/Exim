@@ -117,6 +117,12 @@ export function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-lg text-white">
               <p>
+                <strong className="text-[#A35C10]">Traceable Quality</strong>: Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
+              </p>
+              <p>
+                <strong className="text-[#A35C10]">Low-Smoke Curing</strong>: Low-smoke curing techniques used to preserve the smoke aroma and authenticity of the product.
+              </p>
+              <p>
                 <strong className="text-[#A35C10]">Customer Friendly Approach</strong>: We offer reliable, customized solutions and maintain product uniformity for long-term business partnership.
               </p>
               <p>
@@ -124,12 +130,6 @@ export function About() {
               </p>
               <p>
                 <strong className="text-[#A35C10]">Farm-Centric Relationships</strong>: We partner directly with farming communities to benefit both producers and consumers.
-              </p>
-              <p>
-                <strong className="text-[#A35C10]">Traceable Quality</strong>: Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
-              </p>
-              <p>
-                <strong className="text-[#A35C10]">Low-Smoke Curing</strong>: Low-smoke curing techniques used to preserve the smoke aroma and authenticity of the product.
               </p>
             </div>
             <div className="relative w-full h-64 md:h-[450px] overflow-hidden rounded-xl shadow-lg border border-white/10">
