@@ -17,7 +17,7 @@ export function Home() {
     {
       icon: <ShieldCheck className="w-8 h-8" />,
       title: "Quality Assurance",
-      description: "Rigorous quality control and certifications for premium products."
+      description: "Rigorous quality testing for every batch and crafted with customer solutions."
     },
     {
       icon: <Settings className="w-8 h-8" />,
