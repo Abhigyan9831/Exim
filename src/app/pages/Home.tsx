@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { TrendingUp, Leaf, Award, ArrowRight, Globe2, ShieldCheck, Settings } from "lucide-react";
+import { TrendingUp, Users, Leaf, Award, ArrowRight, Globe2, ShieldCheck, Settings } from "lucide-react";
 
 export function Home() {
   const features = [
