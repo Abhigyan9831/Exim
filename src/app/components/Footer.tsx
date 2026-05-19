@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter, Instagram } from "luc
 export function Footer() {
   return (
     <footer className="bg-brand-brown text-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="text-2xl font-bold">M R EXIM</div>
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-[#030303] py-4 text-center text-[#030303] text-[10px]">
+      <div className="border-t border-[#030303] py-2 text-center text-[#030303] text-[10px]">
         <p>&copy; {new Date().getFullYear()} M R EXIM. All rights reserved.</p>
       </div>
     </footer>
