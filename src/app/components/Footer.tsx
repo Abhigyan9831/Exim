@@ -40,8 +40,8 @@ export function Footer() {
             <h3 className="text-lg font-bold mb-4">Certifications</h3>
             <ul className="space-y-2">
               <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">ISO Certified</Link></li>
-              <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">FSSAI</Link></li>
               <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">APEDA</Link></li>
+              <li><Link to="/certifications" className="text-black/80 hover:text-black transition-colors font-medium">FSSAI</Link></li>
             </ul>
           </div>
 
