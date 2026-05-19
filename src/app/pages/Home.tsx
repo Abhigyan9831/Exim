@@ -63,7 +63,7 @@ export function Home() {
 
       <section className="py-8 md:py-12 bg-[#030303]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-6 text-center">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-6 md:mb-10 text-center">
             Welcome to <span className="text-[#A35C10]">M R EXIM</span>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -83,7 +83,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-8 md:py-12 bg-brand-grey">
+      <section className="py-6 md:py-8 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-4 md:mb-6">
             <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
@@ -113,7 +113,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-8 md:py-12 bg-[#030303] text-white">
+      <section className="py-6 md:py-8 bg-[#030303] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center">
             Our <span className="text-[#A35C10]">Product</span>
@@ -164,7 +164,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-8 md:py-12 bg-brand-grey shadow-inner">
+      <section className="py-6 md:py-8 bg-brand-grey shadow-inner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-6">
             Ready to Partner <span className="text-[#A35C10]">With Us</span>?
