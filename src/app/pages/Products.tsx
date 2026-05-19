@@ -63,7 +63,7 @@ export function Products() {
             
             {/* Right Column: Product Image Frame & 3-Grid Thumbnails */}
             <div className="flex flex-col">
-              <div className="relative h-64 md:h-[432px] w-full">
+              <div className="relative h-56 md:h-[360px] w-full">
                 <ImageWithFallback
                   src={activeImage}
                   alt="Premium Himalayan Black Cardamom"
@@ -72,7 +72,7 @@ export function Products() {
               </div>
               
               {/* Row of 3 Small Grids Horizontally for Alternate Views */}
-              <div className="grid grid-cols-3 gap-4 mt-4">
+              <div className="grid grid-cols-3 gap-4 mt-4 max-w-md">
                 <button
                   onClick={() => setActiveImage(PRODUCT_IMAGES.view1)}
                   className={`relative aspect-square w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
