@@ -33,8 +33,8 @@ export function Home() {
       <section className="relative min-h-[500px] sm:min-h-[600px] md:h-auto md:aspect-[1672/941] flex items-center justify-center overflow-hidden w-full">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
-          src="/images/who_we.png"
-          alt="Who We Are - M R EXIM"
+          src="/images/Hero.png"
+          alt="M R EXIM Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4 -mt-16 md:-mt-12">
@@ -72,12 +72,14 @@ export function Home() {
                 At M R EXIM, we are essentially focussed on trading in high-quality organic Black cardamom from India. In order to meet the quality expectations of our clientele, we select the batches through vigorous quality control procedures, ethical sourcing strategies and thereby providing the desired certifications. Our farm-centric relationships with the growers in the remote areas enable us to maintain the authenticity of our products and a steady supply of traceable ingredients throughout the year. In addition to this, we have adopted a customer-centric approach to navigate the market demand to the growers, thus positively impacting rural livelihoods. Our products are applicable across various industries and we provide different grades of black cardamom suited to customised and specific requirements. M R EXIM offers worldwide delivery with FOB, CIF, CNF shipping terms and other flexible mode of payments. We emphasize on transparent communications, quick response times and customised service to build strong and lasting business relationships.
               </p>
             </div>
-            <div>
-              <ImageWithFallback
-                src="/images/we_are.png"
-                alt="Welcome to MR Exim"
-                className="w-full h-auto object-cover rounded-lg"
-              />
+            <div className="flex justify-center lg:justify-start">
+              <div className="relative w-full max-w-[584px] aspect-square overflow-hidden rounded-xl shadow-lg border border-white/10">
+                <ImageWithFallback
+                  src="/images/black_cardamom_harvesting_square_584x584.png"
+                  alt="Welcome to MR Exim"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

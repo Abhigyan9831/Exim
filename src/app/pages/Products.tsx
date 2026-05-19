@@ -6,7 +6,8 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 const PRODUCT_IMAGES = {
   view1: "/images/view1.png", // Primary View
   view2: "/images/view2.png", // Alternative View 1
-  view3: "/images/view3.png"  // Alternative View 2
+  view3: "/images/view3.png", // Alternative View 2
+  view4: "/images/grid4.png"  // Alternative View 3
 };
 
 export function Products() {
@@ -18,7 +19,7 @@ export function Products() {
       <section className="relative h-[100dvh] md:h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxzcGljZXN8ZW58MXx8fHwxNzc3Mzc0ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="/images/probg.png"
           alt="Our Products Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -71,8 +72,8 @@ export function Products() {
                 />
               </div>
               
-              {/* Row of 3 Small Grids Horizontally for Alternate Views */}
-              <div className="grid grid-cols-3 gap-4 mt-4 max-w-md">
+              {/* Row of 4 Small Grids Horizontally for Alternate Views */}
+              <div className="grid grid-cols-4 gap-4 mt-4 max-w-md">
                 <button
                   onClick={() => setActiveImage(PRODUCT_IMAGES.view1)}
                   className={`relative aspect-square w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
@@ -119,6 +120,23 @@ export function Products() {
                   <ImageWithFallback
                     src={PRODUCT_IMAGES.view3}
                     alt="Cardamom View 3"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />
+                </button>
+
+                <button
+                  onClick={() => setActiveImage(PRODUCT_IMAGES.view4)}
+                  className={`relative aspect-square w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
+                    activeImage === PRODUCT_IMAGES.view4
+                      ? "border-brand-brown opacity-100 scale-[0.98] shadow-md"
+                      : "border-white/10 opacity-70 hover:opacity-100"
+                  }`}
+                  aria-label="View fourth angle"
+                >
+                  <ImageWithFallback
+                    src={PRODUCT_IMAGES.view4}
+                    alt="Cardamom View 4"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />

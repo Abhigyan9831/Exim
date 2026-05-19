@@ -25,8 +25,8 @@ export function About() {
       <section className="relative h-[100dvh] md:h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1628884187093-55e511036c7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxhZ3JpY3VsdHVyYWwlMjBmYXJtJTIwZmllbGR8ZW58MXx8fHwxNzc3Mzc0ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Agricultural field"
+          src="/images/black cardamom image 1.png"
+          alt="Black Cardamom Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
@@ -132,11 +132,11 @@ export function About() {
                 <strong className="text-[#A35C10]">Traceable Quality</strong>: Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
               </p>
             </div>
-            <div>
+            <div className="relative w-full h-64 md:h-[450px] overflow-hidden rounded-xl shadow-lg border border-white/10">
               <ImageWithFallback
-                src="/images/unique.png"
+                src="/images/HARVEST.png"
                 alt="What Makes Us Unique"
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
