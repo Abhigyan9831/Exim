@@ -117,6 +117,9 @@ export function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-lg text-white">
               <p>
+                <strong className="text-white">Farm-Centric Relationships:</strong> We partner directly with farming communities to benefit both producers and consumers.
+              </p>
+              <p>
                 <strong className="text-white">Customer Friendly Approach:</strong> We offer reliable, customized solutions and maintain product uniformity for long-term business partnership.
               </p>
               <p>
