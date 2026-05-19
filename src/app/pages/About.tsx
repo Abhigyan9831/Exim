@@ -87,7 +87,7 @@ export function About() {
       <section className="py-12 md:py-20 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-4xl font-bold text-[#A35C10] mb-4">Our Core Values</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">Our Core <span className="text-[#A35C10]">Values</span></h2>
             <p className="text-xl text-white max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
