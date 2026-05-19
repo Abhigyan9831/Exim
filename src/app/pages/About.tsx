@@ -117,19 +117,19 @@ export function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-lg text-white">
               <p>
-                <strong className="text-white">Farm-Centric Relationships:</strong> We partner directly with farming communities to benefit both producers and consumers.
+                <strong className="text-[#A35C10]">Farm-Centric Relationships</strong>: We partner directly with farming communities to benefit both producers and consumers.
               </p>
               <p>
-                <strong className="text-white">Customer Friendly Approach:</strong> We offer reliable, customized solutions and maintain product uniformity for long-term business partnership.
+                <strong className="text-[#A35C10]">Customer Friendly Approach</strong>: We offer reliable, customized solutions and maintain product uniformity for long-term business partnership.
               </p>
               <p>
-                <strong className="text-white">Specialty Focus:</strong> Our expertise in ethnic spices and artisanal commodities enables us to make a distinct position in the market.
+                <strong className="text-[#A35C10]">Specialty Focus</strong>: Our expertise in ethnic spices and artisanal commodities enables us to make a distinct position in the market.
               </p>
               <p>
-                <strong className="text-white">Low-Smoke Curing:</strong> Low-smoke curing techniques used to preserve the smoke aroma and authenticity of the product.
+                <strong className="text-[#A35C10]">Low-Smoke Curing</strong>: Low-smoke curing techniques used to preserve the smoke aroma and authenticity of the product.
               </p>
               <p>
-                <strong className="text-white">Traceable Quality:</strong> Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
+                <strong className="text-[#A35C10]">Traceable Quality</strong>: Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
               </p>
             </div>
             <div>
