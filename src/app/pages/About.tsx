@@ -32,7 +32,7 @@ export function About() {
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">About M R EXIM</h1>
           <p className="text-xl text-gray-100">
-            Indian firm trading in specialty agricultural commodities
+            Indian firm trading in naturally grown spices
           </p>
         </div>
       </section>
