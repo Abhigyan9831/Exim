@@ -65,7 +65,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-[#030303] pt-4 text-center text-[#030303] text-[10px]">
+      <div className="border-t border-[#030303] pt-2 mt-4 text-center text-[#030303] text-[10px]">
         <p>&copy; {new Date().getFullYear()} M R EXIM. All rights reserved.</p>
       </div>
     </footer>
