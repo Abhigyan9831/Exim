@@ -126,7 +126,7 @@ export function Home() {
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <Award className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div className="text-black/80">Premium Himalayan Black Cardamom with authentic smoky aroma and rich flavor.</div>
+                  <div className="text-black/80">Himalayan Black Cardamom with authentic smoky aroma & rich flavor.</div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Leaf className="w-6 h-6 flex-shrink-0 mt-1" />
@@ -138,7 +138,7 @@ export function Home() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Users className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div className="text-black/80">Cultivated with cultural heritage and supports rural livelihoods.</div>
+                  <div className="text-black/80">Handcrafted with cultural heritage and supports rural livelihoods.</div>
                 </li>
               </ul>
               <Link
