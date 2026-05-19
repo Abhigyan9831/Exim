@@ -113,37 +113,37 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-brand-brown text-black">
+      <section className="py-12 md:py-20 bg-[#030303] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center">
-            Our Product
+            Our <span className="text-[#A35C10]">Product</span>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-semibold text-black/90 mb-6">
+              <h3 className="text-2xl font-semibold text-white mb-6">
                 Himalayan Black Cardamom
               </h3>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <Award className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div className="text-black/80">Himalayan Black Cardamom with authentic smoky aroma & rich flavor.</div>
+                  <div className="text-white/80">Himalayan Black Cardamom with authentic smoky aroma & rich flavor.</div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Leaf className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div className="text-black/80">Naturally processed and traditionally smoke-cured for global culinary use.</div>
+                  <div className="text-white/80">Naturally processed and traditionally smoke-cured for global culinary use.</div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Globe2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div className="text-black/80">Ideal for stews, broths, braised, and slow-cooked dishes.</div>
+                  <div className="text-white/80">Ideal for stews, broths, braised, and slow-cooked dishes.</div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Users className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div className="text-black/80">Handcrafted with cultural heritage and supports rural livelihoods.</div>
+                  <div className="text-white/80">Handcrafted with cultural heritage and supports rural livelihoods.</div>
                 </li>
               </ul>
               <Link
                 to="/products"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#A35C10] text-white rounded-lg font-semibold hover:bg-[#A35C10]/90 transition-colors"
               >
                 View More <ArrowRight className="w-5 h-5" />
               </Link>
