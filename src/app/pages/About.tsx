@@ -37,7 +37,7 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-brand-grey">
+      <section className="py-8 md:py-12 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -59,7 +59,7 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-brand-grey">
+      <section className="py-8 md:py-12 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-white/5 p-8 rounded-xl border border-white/10 shadow-sm">
@@ -84,7 +84,7 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-brand-grey">
+      <section className="py-8 md:py-12 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">Our Core <span className="text-[#A35C10]">Values</span></h2>
@@ -111,7 +111,7 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-[#030303] text-white">
+      <section className="py-8 md:py-12 bg-[#030303] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-4xl font-bold mb-12 text-center">What Makes Us <span className="text-[#A35C10]">Unique</span></h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

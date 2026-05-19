@@ -31,7 +31,7 @@ export function Certifications() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-brand-grey">
+      <section className="py-8 md:py-12 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
@@ -65,7 +65,7 @@ export function Certifications() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-brand-grey shadow-inner">
+      <section className="py-3 md:py-4 pb-12 md:pb-16 bg-brand-grey shadow-inner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
             Ready to Partner <span className="text-[#A35C10]">With Us</span>?
