@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter, Instagram, Youtube } from "lucide-react";
 
 export function Footer() {
   return (
@@ -20,6 +20,9 @@ export function Footer() {
               </a>
               <a href="#" className="text-black/80 hover:text-black transition-colors">
                 <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-black/80 hover:text-black transition-colors">
+                <Youtube className="w-5 h-5" />
               </a>
               <a href="#" className="text-black/80 hover:text-black transition-colors">
                 <Instagram className="w-5 h-5" />
