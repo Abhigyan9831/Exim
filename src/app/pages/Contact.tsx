@@ -200,17 +200,6 @@ export function Contact() {
                       </a>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <Clock className="w-6 h-6 text-brand-brown flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="font-medium text-white">Business Hours</div>
-                      <div className="text-white/80 text-sm">
-                        Monday - Friday: 9:00 AM - 6:00 PM<br />
-                        Saturday: 9:00 AM - 2:00 PM<br />
-                        Sunday: Closed
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
 
