@@ -64,7 +64,7 @@ export function Home() {
       <section className="pt-8 md:pt-12 pb-16 md:pb-32 bg-[#030303]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-8 md:mb-12 text-center">
-            Welcome to M R Exim
+            Welcome to <span className="text-[#A35C10]">M R EXIM</span>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
