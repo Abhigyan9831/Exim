@@ -146,27 +146,6 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-brand-grey">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-brand-grey p-8 rounded-xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
-              Leadership
-            </h2>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left">
-              <div className="w-24 h-24 bg-brand-olive rounded-full flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
-                SM
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white">Shoshi Mitra</h3>
-                <p className="text-lg text-brand-brown mb-2">Board of Directors</p>
-                <p className="text-white">
-                  Leading M R EXIM with a vision for sustainable growth and global excellence
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
