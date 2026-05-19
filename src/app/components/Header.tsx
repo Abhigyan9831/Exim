@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,9 +46,6 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <button className="ml-4 p-2 text-gray-600 hover:text-amber-700 transition-colors">
-              <Globe className="w-5 h-5" />
-            </button>
           </nav>
 
           <button
