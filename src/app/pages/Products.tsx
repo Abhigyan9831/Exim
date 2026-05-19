@@ -131,7 +131,7 @@ export function Products() {
       </section>
 
       {/* Custom Inquiry Section */}
-      <section className="py-12 md:py-20 bg-brand-grey border-t border-white/5">
+      <section className="py-12 md:py-20 bg-brand-grey">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Custom Sourcing & Bulk Orders
