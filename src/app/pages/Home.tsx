@@ -30,7 +30,13 @@ export function Home() {
 
   return (
     <div>
-      <section className="relative min-h-[500px] sm:min-h-[600px] md:h-auto md:aspect-[1672/941] flex items-center justify-center overflow-hidden w-full bg-brand-grey">
+      <section className="relative min-h-[500px] sm:min-h-[600px] md:h-auto md:aspect-[1672/941] flex items-center justify-center overflow-hidden w-full">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
+        <ImageWithFallback
+          src="/images/who_we.png"
+          alt="Who We Are - M R EXIM"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Naturally Grown<br />Loved Worldwide
