@@ -73,7 +73,7 @@ export function Products() {
               </div>
               
               {/* Row of 4 Small Grids Horizontally for Alternate Views */}
-              <div className="grid grid-cols-4 gap-4 mt-4 max-w-md">
+              <div className="grid grid-cols-4 gap-4 mt-4 w-full">
                 <button
                   onClick={() => setActiveImage(PRODUCT_IMAGES.view1)}
                   className={`relative aspect-square w-full rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${
