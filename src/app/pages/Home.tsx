@@ -74,7 +74,7 @@ export function Home() {
             </div>
             <div>
               <ImageWithFallback
-                src="/images/welcome.png"
+                src="/images/welcome_farmers.png"
                 alt="Welcome to MR Exim"
                 className="w-full h-auto object-cover rounded-lg"
               />
