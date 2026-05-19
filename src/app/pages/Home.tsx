@@ -21,7 +21,7 @@ export function Home() {
     },
     {
       icon: <Settings className="w-8 h-8" />,
-      title: "High-Altitude Himalayan Cultivation",
+      title: "High-Altitude Cultivation",
       description: "We essentially focus on high altitude cultivation of black cardamom (1000-2000m above sea level)."
     }
   ];
