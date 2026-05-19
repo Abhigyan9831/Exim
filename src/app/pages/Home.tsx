@@ -6,8 +6,8 @@ export function Home() {
   const features = [
     {
       icon: <Leaf className="w-8 h-8" />,
-      title: "Sustainable Sourcing",
-      description: "Farm-linked partnerships ensuring quality and sustainability at every step."
+      title: "Ethical Sourcing",
+      description: "Farm-centric relationship ensuring traceability and fair trade practices."
     },
     {
       icon: <Globe2 className="w-8 h-8" />,
