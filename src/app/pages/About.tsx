@@ -117,16 +117,10 @@ export function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-lg text-white">
               <p>
-                <strong className="text-white">Quality Conscious Markets:</strong> We cater exclusively to markets that value premium quality and sustainable sourcing.
+                <strong className="text-white">Customer Friendly Approach:</strong> We offer reliable, customized solutions and maintain product uniformity for long-term business partnership.
               </p>
               <p>
-                <strong className="text-white">Professional Services:</strong> Our decades of trading expertise ensure smooth transactions and highly reliable delivery.
-              </p>
-              <p>
-                <strong className="text-white">Farm-Centric Relationships:</strong> We partner directly with farming communities to benefit both producers and consumers.
-              </p>
-              <p>
-                <strong className="text-white">Specialty Focus:</strong> Our expertise in ethnic spices and specialty agricultural categories sets us apart in the market.
+                <strong className="text-white">Specialty Focus:</strong> Our expertise in ethnic spices and artisanal commodities enables us to make a distinct position in the market.
               </p>
               <p>
                 <strong className="text-white">Low-Smoke Curing:</strong> Low-smoke curing techniques used to preserve the smoke aroma and authenticity of the product.
