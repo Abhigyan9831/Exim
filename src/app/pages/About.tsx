@@ -111,28 +111,28 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-brand-brown text-black">
+      <section className="py-12 md:py-20 bg-[#030303] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-4xl font-bold mb-12 text-center">What Makes Us Unique</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-12 text-center">What Makes Us <span className="text-[#A35C10]">Unique</span></h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 text-lg text-black">
+            <div className="space-y-6 text-lg text-white">
               <p>
-                <strong className="text-black">Quality Conscious Markets:</strong> We cater exclusively to markets that value premium quality and sustainable sourcing.
+                <strong className="text-white">Quality Conscious Markets:</strong> We cater exclusively to markets that value premium quality and sustainable sourcing.
               </p>
               <p>
-                <strong className="text-black">Professional Services:</strong> Our decades of trading expertise ensure smooth transactions and highly reliable delivery.
+                <strong className="text-white">Professional Services:</strong> Our decades of trading expertise ensure smooth transactions and highly reliable delivery.
               </p>
               <p>
-                <strong className="text-black">Farm-Centric Relationships:</strong> We partner directly with farming communities to benefit both producers and consumers.
+                <strong className="text-white">Farm-Centric Relationships:</strong> We partner directly with farming communities to benefit both producers and consumers.
               </p>
               <p>
-                <strong className="text-black">Specialty Focus:</strong> Our expertise in ethnic spices and specialty agricultural categories sets us apart in the market.
+                <strong className="text-white">Specialty Focus:</strong> Our expertise in ethnic spices and specialty agricultural categories sets us apart in the market.
               </p>
               <p>
-                <strong className="text-black">Low-Smoke Curing:</strong> Low-smoke curing techniques used to preserve the smoke aroma and authenticity of the product.
+                <strong className="text-white">Low-Smoke Curing:</strong> Low-smoke curing techniques used to preserve the smoke aroma and authenticity of the product.
               </p>
               <p>
-                <strong className="text-black">Traceable Quality:</strong> Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
+                <strong className="text-white">Traceable Quality:</strong> Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
               </p>
             </div>
             <div>
