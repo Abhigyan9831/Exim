@@ -15,7 +15,7 @@ export function Products() {
   return (
     <div>
       {/* Hero Section - Exact Match with About Page Design */}
-      <section className="relative h-64 md:h-96 flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen md:h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxzcGljZXN8ZW58MXx8fHwxNzc3Mzc0ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
