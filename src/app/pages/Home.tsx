@@ -37,7 +37,7 @@ export function Home() {
           alt="Who We Are - M R EXIM"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
+        <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4 -mt-16 md:-mt-12">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Naturally Grown<br />Loved Worldwide
           </h1>
