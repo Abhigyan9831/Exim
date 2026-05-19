@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { TrendingUp, Users, Leaf, Award, ArrowRight, Globe2, ShieldCheck, Settings } from "lucide-react";
+import { TrendingUp, Leaf, Award, ArrowRight, Globe2, ShieldCheck, Settings } from "lucide-react";
 
 export function Home() {
   const features = [
@@ -8,11 +8,6 @@ export function Home() {
       icon: <Leaf className="w-8 h-8" />,
       title: "Sustainable Sourcing",
       description: "Farm-linked partnerships ensuring quality and sustainability at every step."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Community Farming",
-      description: "Supporting cooperative farming and empowering local communities."
     },
     {
       icon: <Globe2 className="w-8 h-8" />,
@@ -99,7 +94,7 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 xl:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
