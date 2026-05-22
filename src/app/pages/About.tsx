@@ -22,12 +22,12 @@ export function About() {
 
   return (
     <div>
-      <section className="relative h-[100dvh] md:h-96 flex items-center justify-center overflow-hidden">
+      <section className="relative h-[100dvh] md:h-96 flex items-center justify-center overflow-hidden bg-[#030303]">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
-          src="/images/black cardamom image 1.png"
+          src="/images/ChatGPT Image May 19, 2026, 11_45_42 PM.png"
           alt="Black Cardamom Background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain"
         />
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">About M R EXIM</h1>
@@ -48,12 +48,14 @@ export function About() {
                 At M R Exim we are essentially focussed on trading in high-quality organic black cardamom from India. In order to meet the quality expectations of our clientele, we select the batches through vigorous quality control procedures, ethical sourcing strategies and thereby providing the desired certifications. Our farm-centric relationships with the growers in the remote areas enable us to maintain the authenticity of our product and a steady supply of traceable ingredients throughout the year. In addition to this, we have adopted a customer-centric approach to navigate the market demand to the growers, thus positively impacting rural livelihoods. Our product is applicable across various industries and we provide different grades of black cardamom suited to customized and specific requirements. M R EXIM offers worldwide delivery with FOB, CIF, CNF shipping terms and other flexible node of payments. We emphasize on transperent communications, quick response times and customised service to build strong and lasting business relationships.
               </p>
             </div>
-            <div className="relative h-64 md:h-[432px] w-full">
-              <ImageWithFallback
-                src="/images/who_we.png"
-                alt="Who We Are - M R EXIM"
-                className="w-full h-full object-cover rounded-xl shadow-lg border border-white/10"
-              />
+            <div className="flex justify-center lg:justify-end w-full">
+              <div className="relative w-full max-w-[584px] aspect-square overflow-hidden rounded-xl shadow-lg border border-white/10">
+                <ImageWithFallback
+                  src="/images/black_cardamom_harvesting_square_584x584.png"
+                  alt="Who We Are - M R EXIM"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
