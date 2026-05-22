@@ -18,7 +18,7 @@ export function Home() {
           <rect width="100%" height="100%" fill="currentColor" mask="url(#mountainMask)" />
         </svg>
       ),
-      title: "High-Altitude Cultivation",
+      title: "High Altitude Cultivation",
       description: "We essentially focus on high altitude cultivation of pure black cardamom (1000-2000m above sea level)."
     },
     {
