@@ -24,7 +24,7 @@ export function Home() {
     {
       icon: <Leaf className="w-8 h-8" />,
       title: "Ethical Sourcing",
-      description: "Farm-centric relationships ensuring traceability, native ingredients and fair pricing from the mountains to your market."
+      description: "Farm-centric relationships ensuring traceability, native ingredients & fair pricing from the mountains to your market."
     },
     {
       icon: <ShieldCheck className="w-8 h-8" />,
