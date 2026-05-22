@@ -69,7 +69,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-[#030303] py-2 text-center text-[#030303] text-[10px]">
-        <p>&copy; {new Date().getFullYear()} M R EXIM. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} M R EXIM. All rights reserved. Created and Designed by <a href="https://xtraclicks.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">XtraClicks Marketing</a>.</p>
       </div>
     </footer>
   );

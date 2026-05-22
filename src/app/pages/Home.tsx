@@ -1,28 +1,40 @@
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { TrendingUp, Users, Leaf, Award, ArrowRight, Globe2, ShieldCheck, Settings } from "lucide-react";
+import { TrendingUp, Users, Leaf, Award, ArrowRight, Globe2, ShieldCheck, Settings, MountainSnow, Droplet } from "lucide-react";
 
 export function Home() {
   const features = [
     {
-      icon: <Leaf className="w-8 h-8" />,
-      title: "Ethical Sourcing",
-      description: "Farm-centric relationship ensuring traceability and fair trade practices."
+      icon: (
+        <svg className="w-12 h-12" width="100%" height="100%">
+          <defs>
+            <filter id="invert">
+              <feColorMatrix type="matrix" values="-1 0 0 0 1   0 -1 0 0 1   0 0 -1 0 1   0 0 0 1 0" />
+            </filter>
+            <mask id="mountainMask">
+              <image href="/images/WhatsApp Image 2026-05-23 at 00.14.21.jpeg" width="100%" height="100%" filter="url(#invert)" preserveAspectRatio="xMidYMid meet" />
+            </mask>
+          </defs>
+          <rect width="100%" height="100%" fill="currentColor" mask="url(#mountainMask)" />
+        </svg>
+      ),
+      title: "High-Altitude Cultivation",
+      description: "We essentially focus on high altitude cultivation of pure black cardamom (1000-2000m above sea level)."
     },
     {
-      icon: <Globe2 className="w-8 h-8" />,
-      title: "Global Reach",
-      description: "Serving quality-conscious markets across South East Asia and beyond."
+      icon: <Leaf className="w-8 h-8" />,
+      title: "Ethical Sourcing",
+      description: "Farm-centric relationships ensuring traceability, native ingredients and fair pricing from the mountains to your market."
     },
     {
       icon: <ShieldCheck className="w-8 h-8" />,
       title: "Quality Assurance",
-      description: "Rigorous quality testing for every batch and crafted with customer solutions."
+      description: "Rigorous quality testing for small batches, stabilizing moisture content to maintain the authenticity of the product."
     },
     {
-      icon: <Settings className="w-8 h-8" />,
-      title: "High-Altitude Cultivation",
-      description: "We essentially focus on high altitude cultivation of black cardamom (1000-2000m above sea level)."
+      icon: <Globe2 className="w-8 h-8" />,
+      title: "Eco-Friendly Cultivation",
+      description: "Agro- forestry and organic production techniques for sustainability of forest ecosystems."
     }
   ];
 
@@ -30,19 +42,19 @@ export function Home() {
 
   return (
     <div>
-      <section className="relative min-h-[500px] sm:min-h-[600px] md:h-auto md:aspect-[1672/941] flex items-center justify-center overflow-hidden w-full">
+      <section className="relative min-h-[400px] aspect-[1647/955] md:max-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden w-full">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
-          src="/images/Hero.png"
+          src="/images/her.png"
           alt="M R EXIM Hero Background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-bottom brightness-125 saturate-200"
         />
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4 -mt-16 md:-mt-12">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Naturally Grown<br />Loved Worldwide
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-100">
-            Connecting farms to global markets with quality, sustainability, and trust
+            From the Eastern Himalayas to your kitchen
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -69,15 +81,15 @@ export function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl text-white leading-relaxed">
-                At M R EXIM, we are essentially focussed on trading in high-quality organic Black cardamom from India. In order to meet the quality expectations of our clientele, we select the batches through vigorous quality control procedures, ethical sourcing strategies and thereby providing the desired certifications. Our farm-centric relationships with the growers in the remote areas enable us to maintain the authenticity of our products and a steady supply of traceable ingredients throughout the year. In addition to this, we have adopted a customer-centric approach to navigate the market demand to the growers, thus positively impacting rural livelihoods. Our products are applicable across various industries and we provide different grades of black cardamom suited to customised and specific requirements. M R EXIM offers worldwide delivery with FOB, CIF, CNF shipping terms and other flexible mode of payments. We emphasize on transparent communications, quick response times and customised service to build strong and lasting business relationships.
+                At M R EXIM, we are essentially focussed on trading in single origin pure Himalayan Black cardamom from India. In order to meet the quality expectations of our clientele, we select the batches through vigorous quality control procedures, ethical sourcing strategies and thereby providing the desired certifications. Our farm-centric relationships with the growers in the remote areas enable us to maintain the authenticity of our products and a steady supply of traceable ingredients throughout the year. In addition to this, we have adopted a customer-centric approach to navigate the market demand to the growers, thus positively impacting rural livelihoods. Our products are applicable across various industries and we provide different grades of black cardamom suited to customised and specific requirements. M R EXIM offers worldwide delivery with FOB, CIF, CNF shipping terms and other flexible mode of payments. We emphasize on transparent communications, quick response times and customised service to build strong and lasting business relationships.
               </p>
             </div>
             <div className="flex justify-center lg:justify-start">
               <div className="relative w-full max-w-[584px] aspect-square overflow-hidden rounded-xl shadow-lg border border-white/10">
                 <ImageWithFallback
-                  src="/images/black_cardamom_harvesting_square_584x584.png"
+                  src="/images/cardamom_brightness_reduced.png"
                   alt="Welcome to MR Exim"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover brightness-75"
                 />
               </div>
             </div>
@@ -92,7 +104,7 @@ export function Home() {
               Why Choose <span className="text-[#A35C10]">M R EXIM</span>?
             </h2>
             <p className="text-xl text-white max-w-2xl mx-auto">
-              Your trusted partner in specialty agricultural commodities trading
+              Connecting Indian spices with global markets
             </p>
           </div>
 
@@ -141,6 +153,10 @@ export function Home() {
                 <li className="flex items-start gap-3">
                   <Globe2 className="w-6 h-6 flex-shrink-0 mt-1" />
                   <div className="text-white/80">Ideal for stews, broths, braised, and slow-cooked dishes.</div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Droplet className="w-6 h-6 flex-shrink-0 mt-1" />
+                  <div className="text-white/80">Small batches are processed under controlled humidity & moisture stabilized (8-12%).</div>
                 </li>
               </ul>
               <Link
