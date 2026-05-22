@@ -47,7 +47,7 @@ export function Home() {
         <ImageWithFallback
           src="/images/her.png"
           alt="M R EXIM Hero Background"
-          className="absolute inset-0 w-full h-full object-cover object-bottom brightness-125 saturate-200"
+          className="absolute inset-0 w-full h-full object-cover object-[50%_80%] brightness-125 saturate-200"
         />
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4 -mt-16 md:-mt-12">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
