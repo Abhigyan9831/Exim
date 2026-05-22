@@ -168,14 +168,14 @@ export function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <ImageWithFallback
-                src="/images/view1.png"
+                src="/images/ChatGPT Image May 19, 2026, 11_39_19 PM.png"
                 alt="M R EXIM Product View 1"
-                className="w-full h-64 object-cover rounded-lg"
+                className="w-full aspect-square object-cover rounded-lg"
               />
               <ImageWithFallback
-                src="/images/view3.png"
+                src="/images/ChatGPT Image May 23, 2026, 01_23_08 AM.png"
                 alt="M R EXIM Product View 3"
-                className="w-full h-64 object-cover rounded-lg"
+                className="w-full aspect-square object-cover rounded-lg"
               />
             </div>
           </div>
