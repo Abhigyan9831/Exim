@@ -21,7 +21,7 @@ export function Products() {
       {/* Hero Section - Exact Match with About Page Design */}
       <section className="relative h-[100dvh] md:h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
-        <ImageWithFallback
+        <ImageWithFallback noAnimation
           src="/images/probg.png"
           alt="Our Products Background"
           className="absolute inset-0 w-full h-full object-cover"
@@ -41,9 +41,6 @@ export function Products() {
 
             {/* Left Column: Product Information */}
             <div className="flex flex-col h-full justify-center order-2 lg:order-1">
-              <span className="text-[#A35C10] font-semibold tracking-wider uppercase text-sm block mb-3">
-                PREMIUM SPICES
-              </span>
 
               <h2 className="text-2xl md:text-5xl lg:text-[3.5rem] font-serif text-white mb-6 leading-[1.1]">
                 Pure Himalayan <br /> Black Cardamom
@@ -192,7 +189,7 @@ export function Products() {
             {/* Right Column: Product Image Frame & 3-Grid Thumbnails */}
             <div className="flex flex-col lg:sticky lg:top-24 order-1 lg:order-2">
               <div className="relative w-full rounded-2xl shadow-2xl border border-white/10 overflow-hidden bg-[#0A0A0A]">
-                <ImageWithFallback
+                <ImageWithFallback noAnimation
                   src={activeImage}
                   alt="Premium Himalayan Black Cardamom"
                   className="w-full h-auto object-cover transition-all duration-300"
@@ -209,7 +206,7 @@ export function Products() {
                     }`}
                   aria-label="View fourth angle"
                 >
-                  <ImageWithFallback
+                  <ImageWithFallback noAnimation
                     src={PRODUCT_IMAGES.view4}
                     alt="Cardamom View 4"
                     className="w-full h-full object-cover"
@@ -225,7 +222,7 @@ export function Products() {
                     }`}
                   aria-label="View primary angle"
                 >
-                  <ImageWithFallback
+                  <ImageWithFallback noAnimation
                     src={PRODUCT_IMAGES.view1}
                     alt="Cardamom View 1"
                     className="w-full h-full object-cover"
@@ -241,7 +238,7 @@ export function Products() {
                     }`}
                   aria-label="View alternative angle"
                 >
-                  <ImageWithFallback
+                  <ImageWithFallback noAnimation
                     src={PRODUCT_IMAGES.view2}
                     alt="Cardamom View 2"
                     className="w-full h-full object-cover"
@@ -257,7 +254,7 @@ export function Products() {
                     }`}
                   aria-label="View third angle"
                 >
-                  <ImageWithFallback
+                  <ImageWithFallback noAnimation
                     src={PRODUCT_IMAGES.view3}
                     alt="Cardamom View 3"
                     className="w-full h-full object-cover"
@@ -273,7 +270,7 @@ export function Products() {
                     }`}
                   aria-label="View fifth angle"
                 >
-                  <ImageWithFallback
+                  <ImageWithFallback noAnimation
                     src={PRODUCT_IMAGES.view5}
                     alt="Cardamom View 5"
                     className="w-full h-full object-cover"

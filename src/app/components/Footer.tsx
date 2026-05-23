@@ -12,19 +12,19 @@ export function Footer() {
               Indian firm trading in Himalayan Black Cardamom, catering to quality conscious markets.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-black/80 hover:text-black transition-colors">
+              <a href="#" className="text-black/80 hover:text-black transition-all duration-300 hover:scale-125">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-black/80 hover:text-black transition-colors">
+              <a href="#" className="text-black/80 hover:text-black transition-all duration-300 hover:scale-125">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-black/80 hover:text-black transition-colors">
+              <a href="#" className="text-black/80 hover:text-black transition-all duration-300 hover:scale-125">
                 <img src="/icons/twitter.png" alt="Twitter" className="w-5 h-5 object-contain" />
               </a>
-              <a href="#" className="text-black/80 hover:text-black transition-colors">
+              <a href="#" className="text-black/80 hover:text-black transition-all duration-300 hover:scale-125">
                 <Youtube className="w-5 h-5" />
               </a>
-              <a href="#" className="text-black/80 hover:text-black transition-colors">
+              <a href="#" className="text-black/80 hover:text-black transition-all duration-300 hover:scale-125">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
