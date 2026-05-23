@@ -43,7 +43,7 @@ export function Home() {
 
   return (
     <div>
-      <section className="relative min-h-[400px] aspect-[1647/955] md:max-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden w-full">
+      <section className="relative min-h-[100dvh] md:min-h-[400px] md:aspect-[1647/955] md:max-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden w-full">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
           src="/images/her.png"

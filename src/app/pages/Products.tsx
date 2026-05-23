@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { Mountain, Flame, Leaf, Sprout, MapPin, ClipboardList, FileText } from "lucide-react";
+import { Mountain, Flame, Leaf, Sprout, MapPin, ClipboardList, FileText, Droplet } from "lucide-react";
 import { ScrollReveal } from "../components/ScrollReveal";
 
 // Easily swap these URLs with your custom product image paths once ready
@@ -42,7 +42,7 @@ export function Products() {
             {/* Left Column: Product Information */}
             <div className="flex flex-col h-full justify-center order-2 lg:order-1">
 
-              <h2 className="text-2xl md:text-5xl lg:text-[3.5rem] font-serif text-white mb-6 leading-[1.1]">
+              <h2 className="text-2xl md:text-5xl lg:text-[3.5rem] font-bold text-white mb-6 leading-[1.1]">
                 Pure Himalayan <br /> Black Cardamom
               </h2>
 
@@ -70,7 +70,7 @@ export function Products() {
                     </div>
                     <div>
                       <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Himalayan Origin</h3>
-                      <p className="text-white/70 text-base leading-relaxed">Sustainably sourced from the Eastern Himalayan region of India.</p>
+                      <p className="text-white/70 text-base leading-relaxed">Sourced from high altitude farms (to maintain higher essential oil content) in the Eastern Himalayan regions of India.</p>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -81,8 +81,8 @@ export function Products() {
                       <Flame className="w-6 h-6 stroke-[1.5]" />
                     </div>
                     <div>
-                      <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Naturally Smoked & Dried</h3>
-                      <p className="text-white/70 text-base leading-relaxed">Naturally smoke-cured using traditional Himalayan drying methods.</p>
+                      <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Smoked Cure</h3>
+                      <p className="text-white/70 text-base leading-relaxed">Processed under controlled conditions and dried over an open fire.</p>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -94,7 +94,7 @@ export function Products() {
                     </div>
                     <div>
                       <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Rich, Smoky & Robust</h3>
-                      <p className="text-white/70 text-base leading-relaxed">Strong smoky aroma with rich, earthy flavour. Premium hand-selected pods with high essential oil content. Ideal for curries, stews, biryanis, broths & spice blends.</p>
+                      <p className="text-white/70 text-base leading-relaxed">Authentic smoky aroma with rich, full-bodied flavour. Purely hand-selected pods with high essential oil content,  ideal for stews, broths, biryani masala, braised and slow-cooked dishes.</p>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -106,12 +106,24 @@ export function Products() {
                     </div>
                     <div>
                       <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Sustainably Grown</h3>
-                      <p className="text-white/70 text-base leading-relaxed">Carefully cultivated by local farmers, supporting rural livelihoods and preserving cultural heritage.</p>
+                      <p className="text-white/70 text-base leading-relaxed">Carefully cultivated by local farmers, supporting rural livelihoods and preserving forest ecosystems.</p>
                     </div>
                   </div>
                 </ScrollReveal>
 
                 <ScrollReveal delay={400}>
+                  <div className="flex gap-5">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#A35C10]">
+                      <Droplet className="w-6 h-6 stroke-[1.5]" />
+                    </div>
+                    <div>
+                      <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Essential Oil Content</h3>
+                      <p className="text-white/70 text-base leading-relaxed">High essential oil content ( 1.5 - 2.5%) is maintained for preserving the authentic aroma of the product.</p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+
+                <ScrollReveal delay={500}>
                   <div className="flex gap-5 pt-2">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#A35C10]">
                       <ClipboardList className="w-6 h-6 stroke-[1.5]" />
@@ -122,38 +134,38 @@ export function Products() {
                         <ul className="flex flex-col">
                           <ScrollReveal delay={500}>
                             <li className="flex flex-col sm:flex-row sm:items-center justify-between py-3 border-b border-white/5 last:border-0 gap-1 sm:gap-4">
-                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Origin</span>
-                              <span className="text-white/90 font-medium text-sm sm:text-right">Eastern Himalayas, India</span>
+                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Product Type</span>
+                              <span className="text-white/90 font-medium text-sm sm:text-right">Pure Black Cardamom</span>
                             </li>
                           </ScrollReveal>
                           <ScrollReveal delay={600}>
                             <li className="flex flex-col sm:flex-row sm:items-center justify-between py-3 border-b border-white/5 last:border-0 gap-1 sm:gap-4">
-                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Product Type</span>
-                              <span className="text-white/90 font-medium text-sm sm:text-right">Whole Black Cardamom</span>
+                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Processing Method</span>
+                              <span className="text-white/90 font-medium text-sm sm:text-right">Smoke Drying</span>
                             </li>
                           </ScrollReveal>
                           <ScrollReveal delay={700}>
                             <li className="flex flex-col sm:flex-row sm:items-center justify-between py-3 border-b border-white/5 last:border-0 gap-1 sm:gap-4">
-                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Processing Method</span>
-                              <span className="text-white/90 font-medium text-sm sm:text-right">Traditional Smoke Drying</span>
+                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Colour</span>
+                              <span className="text-white/90 font-medium text-sm sm:text-right">Dark Brown</span>
                             </li>
                           </ScrollReveal>
                           <ScrollReveal delay={800}>
                             <li className="flex flex-col sm:flex-row sm:items-center justify-between py-3 border-b border-white/5 last:border-0 gap-1 sm:gap-4">
-                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Colour</span>
-                              <span className="text-white/90 font-medium text-sm sm:text-right">Dark Brown to Deep Black</span>
+                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Quality</span>
+                              <span className="text-white/90 font-medium text-sm sm:text-right">Export Grade</span>
                             </li>
                           </ScrollReveal>
                           <ScrollReveal delay={900}>
                             <li className="flex flex-col sm:flex-row sm:items-center justify-between py-3 border-b border-white/5 last:border-0 gap-1 sm:gap-4">
-                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Aroma</span>
-                              <span className="text-white/90 font-medium text-sm sm:text-right">Strong, Smoky & Earthy</span>
+                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Moisture Content</span>
+                              <span className="text-white/90 font-medium text-sm sm:text-right">8 - 12% (customizable)</span>
                             </li>
                           </ScrollReveal>
                           <ScrollReveal delay={1000}>
                             <li className="flex flex-col sm:flex-row sm:items-center justify-between py-3 border-b border-white/5 last:border-0 gap-1 sm:gap-4">
-                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Quality Grade</span>
-                              <span className="text-white/90 font-medium text-sm sm:text-right">Premium Export Quality</span>
+                              <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Essential Oil</span>
+                              <span className="text-white/90 font-medium text-sm sm:text-right">1.5 - 2.5%</span>
                             </li>
                           </ScrollReveal>
                         </ul>

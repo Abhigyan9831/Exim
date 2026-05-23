@@ -42,7 +42,7 @@ export function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-center md:text-left text-2xl md:text-4xl font-bold text-white mb-6">
                 Who We <span className="text-[#A35C10]">Are</span>
               </h2>
               <p className="text-center sm:text-left text-sm md:text-lg text-white">
