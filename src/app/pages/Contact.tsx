@@ -224,7 +224,6 @@ export function Contact() {
                 <h3 className="text-lg font-bold text-white mb-3">Leadership Contact</h3>
                 <div className="space-y-2">
                   <div className="text-white font-medium">Shoshi Mitra</div>
-                  <div className="text-sm text-white/80">Board of Directors</div>
                   <div className="text-sm text-brand-brown">Available for partnership discussions</div>
                 </div>
               </div>

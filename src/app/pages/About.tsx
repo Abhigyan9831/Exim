@@ -25,9 +25,9 @@ export function About() {
       <section className="relative h-[100dvh] md:h-96 flex items-center justify-center overflow-hidden bg-[#030303]">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
-          src="/images/ChatGPT Image May 19, 2026, 11_45_42 PM.png"
+          src="/images/ChatGPT Image May 23, 2026, 01_41_36 AM.png"
           alt="Black Cardamom Background"
-          className="absolute inset-0 w-full h-full object-contain"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">About M R EXIM</h1>
@@ -70,7 +70,7 @@ export function About() {
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Mission</h2>
               <p className="text-lg text-white">
-                To deliver mountain-grown authentic Himalayan Black Cardamom from India to global markets, at the same time empowering rural livelihoods.
+                To deliver mountain-grown, authentic spices from India to global markets, while empowering rural livelihoods.
               </p>
             </div>
             <div className="bg-white/5 p-8 rounded-xl border border-white/10 shadow-sm">
@@ -79,7 +79,7 @@ export function About() {
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Vision</h2>
               <p className="text-lg text-white">
-                To connect high altitude black cardamom farms directly with international buyers through sustainability, quality focussed processing and fair trade practices.
+                To connect high altitude spices farms directly with international buyers through sustainability, quality-focused processing and fair trade practices.
               </p>
             </div>
           </div>
@@ -131,15 +131,24 @@ export function About() {
                 <strong className="text-[#A35C10]">Specialty Focus</strong>: Our expertise in ethnic spices and artisanal commodities enables us to make a distinct position in the market.
               </p>
               <p>
-                <strong className="text-[#A35C10]">Farm-Centric Relationships</strong>: We partner directly with farming communities to benefit both producers and consumers.
+                <strong className="text-[#A35C10]">Farm-Centric Relationships</strong>: Cultivation and production by trusted farmer cooperatives from the eastern Himalayas of India.
               </p>
             </div>
-            <div className="relative w-full h-64 md:h-[450px] overflow-hidden rounded-xl shadow-lg border border-white/10">
-              <ImageWithFallback
-                src="/images/HARVEST.png"
-                alt="What Makes Us Unique"
-                className="w-full h-full object-cover"
-              />
+            <div className="grid grid-cols-2 gap-4 w-full">
+              <div className="relative w-full aspect-square overflow-hidden rounded-xl shadow-lg border border-white/10 bg-white/5">
+                <ImageWithFallback
+                  src="/images/ChatGPT Image May 23, 2026, 01_52_40 AM.png"
+                  alt="Unique Feature 1"
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="relative w-full aspect-square overflow-hidden rounded-xl shadow-lg border border-white/10 bg-white/5">
+                <ImageWithFallback
+                  src="/images/ChatGPT Image May 23, 2026, 02_06_02 AM.png"
+                  alt="Unique Feature 2"
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                />
+              </div>
             </div>
           </div>
         </div>
