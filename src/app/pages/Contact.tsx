@@ -45,10 +45,10 @@ export function Contact() {
 
   return (
     <div>
-      <section className="bg-brand-brown text-black py-16">
+      <section className="bg-brand-brown text-black py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-black/80">
+          <p className="text-sm md:text-xl text-black/80">
             Get in touch with our team for inquiries, quotes, and partnerships
           </p>
         </div>
@@ -59,7 +59,7 @@ export function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <div className="bg-white/5 border border-white/10 rounded-xl p-8 shadow-sm">
-                <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
@@ -158,7 +158,7 @@ export function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-4 bg-brand-brown text-white rounded-lg font-semibold hover:bg-brand-brown transition-colors flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-brand-brown text-white rounded-lg font-semibold hover:bg-brand-brown transition-colors flex items-center justify-center gap-2 text-sm md:text-base"
                   >
                     <Send className="w-5 h-5" />
                     Send Message
@@ -236,7 +236,7 @@ export function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Location</h2>
-            <p className="text-lg text-white/80">Visit us at our office in Kolkata</p>
+            <p className="text-sm md:text-lg text-white/80">Visit us at our office in Kolkata</p>
           </div>
           <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden h-64 md:h-96 flex items-center justify-center">
             <div className="text-center text-white/60">
