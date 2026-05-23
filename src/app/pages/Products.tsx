@@ -81,7 +81,7 @@ export function Products() {
                       <Flame className="w-6 h-6 stroke-[1.5]" />
                     </div>
                     <div>
-                      <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Smoked Cure</h3>
+                      <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Smoke Cured</h3>
                       <p className="text-white/70 text-base leading-relaxed">Processed under controlled conditions and dried over an open fire.</p>
                     </div>
                   </div>
@@ -118,7 +118,7 @@ export function Products() {
                     </div>
                     <div>
                       <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Essential Oil Content</h3>
-                      <p className="text-white/70 text-base leading-relaxed">High essential oil content ( 1.5 - 2.5%) is maintained for preserving the authentic aroma of the product.</p>
+                      <p className="text-white/70 text-base leading-relaxed">High essential oil content ( 1.5 - 2.5%) is maintained for preserving the authentic aroma of the prod.</p>
                     </div>
                   </div>
                 </ScrollReveal>
