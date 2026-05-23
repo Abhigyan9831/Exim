@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Outlet, useNavigate, useLocation } from "react-router";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
@@ -11,6 +11,10 @@ export function Layout() {
   const navigate = useNavigate();
   const location = useLocation();
   const [isAiChatOpen, setIsAiChatOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen flex flex-col relative">
