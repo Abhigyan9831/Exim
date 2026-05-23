@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { Mountain, Flame, Leaf, Sprout, MapPin, ClipboardList } from "lucide-react";
+import { Mountain, Flame, Leaf, Sprout, MapPin, ClipboardList, FileText } from "lucide-react";
 
 // Easily swap these URLs with your custom product image paths once ready
 const PRODUCT_IMAGES = {
@@ -47,15 +47,11 @@ export function Products() {
                 Premium Himalayan <br /> Black Cardamom
               </h2>
 
-              <div className="flex items-center mb-8">
+              <div className="flex items-center mb-10">
                 <div className="h-[1px] w-12 bg-white/10"></div>
                 <div className="w-2 h-2 rotate-45 border border-[#A35C10] mx-2"></div>
                 <div className="h-[1px] w-12 bg-white/10"></div>
               </div>
-
-              <p className="text-lg text-white/80 leading-relaxed mb-10">
-                Sourced from the pristine Himalayan region of India, our Black Cardamom is prized for its bold smoky aroma and rich, earthy flavour—an essential ingredient in stews, broths, braised dishes and slow-cooked recipes.
-              </p>
 
               <div className="space-y-6 mb-10">
                 <div className="flex gap-5">
@@ -142,6 +138,16 @@ export function Products() {
                         </li>
                       </ul>
                     </div>
+                  </div>
+                </div>
+
+                <div className="flex gap-5 pt-2">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#A35C10]">
+                    <FileText className="w-6 h-6 stroke-[1.5]" />
+                  </div>
+                  <div>
+                    <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Product Description</h3>
+                    <p className="text-white/70 text-base leading-relaxed">As a spice supplier from India, our Black Cardamom is native to the Himalayan region and features a distinct smoky aroma that serves as a crucial ingredient for stews, broths, braised foods and slow-cooked dishes. Pure Black cardamom is naturally processed using traditional drying methods and smoke-cured to preserve its authentic smoky aroma and intense taste, ideal for international culinary standards. Grown in the wild Himalayan terrains, each pod of cardamom narrates a story of cultural richness and culinary delight. It begins with meticulous farming and the cultivation carries a cultural significance which impacts the rural livelihoods. The rough dark pods work in the background, creating a robust smoky flavour that perfumes slow-cooked dishes to perfection. We strictly source from high-altitude farms for their rich essential oil content that produces the desired flavour profiles.</p>
                   </div>
                 </div>
               </div>
