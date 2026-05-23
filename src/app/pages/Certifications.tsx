@@ -24,7 +24,7 @@ export function Certifications() {
     <div>
       <section className="bg-brand-brown text-black py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">Certifications & Quality</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Certifications</h1>
           <p className="text-sm md:text-xl text-black/80">
             Committed to the highest standards of quality, safety, and sustainability
           </p>
