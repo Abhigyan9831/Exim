@@ -56,7 +56,7 @@ export function ProductDetail() {
               <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">
                 {product.name}
               </h1>
-              <p className="text-xl text-white mb-6">
+              <p className="text-center sm:text-left text-xl text-white mb-6">
                 {product.description}
               </p>
 

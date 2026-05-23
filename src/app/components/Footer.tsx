@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="text-2xl font-bold">M R EXIM</div>
-            <p className="text-black/80 text-sm">
+            <p className="text-center sm:text-left text-black/80 text-sm">
               Indian firm trading in Himalayan Black Cardamom, catering to quality conscious markets.
             </p>
             <div className="flex space-x-4">

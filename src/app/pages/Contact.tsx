@@ -208,7 +208,7 @@ export function Contact() {
                   <MessageCircle className="w-8 h-8" />
                   <h3 className="text-xl font-bold">Quick Connect</h3>
                 </div>
-                <p className="mb-4 text-green-50">
+                <p className="text-center sm:text-left mb-4 text-green-50">
                   Have an urgent inquiry? Chat with us directly on WhatsApp for quick responses.
                 </p>
                 <button

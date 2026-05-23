@@ -44,7 +44,7 @@ export function About() {
               <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
                 Who We <span className="text-[#A35C10]">Are</span>
               </h2>
-              <p className="text-lg text-white">
+              <p className="text-center sm:text-left text-lg text-white">
                 At M R Exim we are essentially focussed on trading in high-quality organic black cardamom from India. In order to meet the quality expectations of our clientele, we select the batches through vigorous quality control procedures, ethical sourcing strategies and thereby providing the desired certifications. Our farm-centric relationships with the growers in the remote areas enable us to maintain the authenticity of our product and a steady supply of traceable ingredients throughout the year. In addition to this, we have adopted a customer-centric approach to navigate the market demand to the growers, thus positively impacting rural livelihoods. Our product is applicable across various industries and we provide different grades of black cardamom suited to customized and specific requirements. M R EXIM offers worldwide delivery with FOB, CIF, CNF shipping terms and other flexible node of payments. We emphasize on transperent communications, quick response times and customised service to build strong and lasting business relationships.
               </p>
             </div>
@@ -69,7 +69,7 @@ export function About() {
                 <Target className="w-8 h-8" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Mission</h2>
-              <p className="text-lg text-white">
+              <p className="text-center sm:text-left text-lg text-white">
                 To deliver mountain-grown, authentic spices from India to global markets, while empowering rural livelihoods.
               </p>
             </div>
@@ -78,7 +78,7 @@ export function About() {
                 <Eye className="w-8 h-8" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Vision</h2>
-              <p className="text-lg text-white">
+              <p className="text-center sm:text-left text-lg text-white">
                 To connect high altitude spices farms directly with international buyers through sustainability, quality-focused processing and fair trade practices.
               </p>
             </div>
@@ -117,7 +117,7 @@ export function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-4xl font-bold mb-12 text-center">What Makes Us <span className="text-[#A35C10]">Unique</span></h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 text-lg text-white">
+            <div className="space-y-6 text-lg text-white text-center sm:text-left">
               <p>
                 <strong className="text-[#A35C10]">Traceable Quality</strong>: Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
               </p>
