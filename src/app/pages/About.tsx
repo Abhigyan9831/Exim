@@ -119,7 +119,7 @@ export function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-lg text-white text-center sm:text-left">
               <p>
-                <strong className="text-[#A35C10]">Traceable Quality</strong>: Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
+                <strong className="text-[#A35C10]">Farm-Centric Relationships</strong>: Cultivation and production by trusted farmer cooperatives from the eastern Himalayas of India.
               </p>
               <p>
                 <strong className="text-[#A35C10]">Low-Smoke Curing</strong>: Low-smoke curing techniques used to preserve the smoke aroma and authenticity of the product.
@@ -131,7 +131,7 @@ export function About() {
                 <strong className="text-[#A35C10]">Specialty Focus</strong>: Our expertise in ethnic spices and artisanal commodities enables us to make a distinct position in the market.
               </p>
               <p>
-                <strong className="text-[#A35C10]">Farm-Centric Relationships</strong>: Cultivation and production by trusted farmer cooperatives from the eastern Himalayas of India.
+                <strong className="text-[#A35C10]">Traceable Quality</strong>: Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4 w-full">
