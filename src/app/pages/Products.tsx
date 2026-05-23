@@ -46,7 +46,7 @@ export function Products() {
               </span>
 
               <h2 className="text-2xl md:text-5xl lg:text-[3.5rem] font-serif text-white mb-6 leading-[1.1]">
-                Premium Himalayan <br /> Black Cardamom
+                Pure Himalayan <br /> Black Cardamom
               </h2>
 
               <div className="flex items-center mb-10">

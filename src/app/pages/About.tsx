@@ -65,8 +65,8 @@ export function About() {
       <section className="py-8 md:py-12 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            <div className="bg-white/5 p-6 md:p-8 rounded-xl border border-white/10 shadow-sm">
-              <div className="w-16 h-16 bg-brand-brown rounded-lg flex items-center justify-center text-white mb-6">
+            <div className="bg-white/5 p-6 md:p-8 rounded-xl border border-white/10 shadow-sm text-center md:text-left">
+              <div className="w-16 h-16 bg-brand-brown rounded-lg flex items-center justify-center text-white mb-6 mx-auto md:mx-0">
                 <Target className="w-8 h-8" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Mission</h2>
@@ -74,8 +74,8 @@ export function About() {
                 To deliver mountain-grown, authentic spices from India to global markets, while empowering rural livelihoods.
               </p>
             </div>
-            <div className="bg-white/5 p-6 md:p-8 rounded-xl border border-white/10 shadow-sm">
-              <div className="w-16 h-16 bg-brand-brown rounded-lg flex items-center justify-center text-white mb-6">
+            <div className="bg-white/5 p-6 md:p-8 rounded-xl border border-white/10 shadow-sm text-center md:text-left">
+              <div className="w-16 h-16 bg-brand-brown rounded-lg flex items-center justify-center text-white mb-6 mx-auto md:mx-0">
                 <Eye className="w-8 h-8" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Vision</h2>
