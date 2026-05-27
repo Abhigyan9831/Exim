@@ -14,7 +14,7 @@ const PRODUCT_IMAGES = {
 };
 
 export function Products() {
-  const [activeImage, setActiveImage] = useState(PRODUCT_IMAGES.view1);
+  const [activeImage, setActiveImage] = useState(PRODUCT_IMAGES.view4);
 
   return (
     <div>
@@ -227,16 +227,16 @@ export function Products() {
                 </button>
 
                 <button
-                  onClick={() => setActiveImage(PRODUCT_IMAGES.view1)}
-                  className={`relative aspect-square flex-none w-[calc(25%-0.75rem)] snap-start rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${activeImage === PRODUCT_IMAGES.view1
+                  onClick={() => setActiveImage(PRODUCT_IMAGES.view5)}
+                  className={`relative aspect-square flex-none w-[calc(25%-0.75rem)] snap-start rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${activeImage === PRODUCT_IMAGES.view5
                     ? "border-brand-brown opacity-100 scale-[0.98] shadow-md"
                     : "border-white/10 opacity-70 hover:opacity-100"
                     }`}
-                  aria-label="View primary angle"
+                  aria-label="View fifth angle"
                 >
                   <ImageWithFallback noAnimation
-                    src={PRODUCT_IMAGES.view1}
-                    alt="Cardamom View 1"
+                    src={PRODUCT_IMAGES.view5}
+                    alt="Cardamom View 5"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />
@@ -275,16 +275,16 @@ export function Products() {
                 </button>
 
                 <button
-                  onClick={() => setActiveImage(PRODUCT_IMAGES.view5)}
-                  className={`relative aspect-square flex-none w-[calc(25%-0.75rem)] snap-start rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${activeImage === PRODUCT_IMAGES.view5
+                  onClick={() => setActiveImage(PRODUCT_IMAGES.view1)}
+                  className={`relative aspect-square flex-none w-[calc(25%-0.75rem)] snap-start rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer focus:outline-none ${activeImage === PRODUCT_IMAGES.view1
                     ? "border-brand-brown opacity-100 scale-[0.98] shadow-md"
                     : "border-white/10 opacity-70 hover:opacity-100"
                     }`}
-                  aria-label="View fifth angle"
+                  aria-label="View primary angle"
                 >
                   <ImageWithFallback noAnimation
-                    src={PRODUCT_IMAGES.view5}
-                    alt="Cardamom View 5"
+                    src={PRODUCT_IMAGES.view1}
+                    alt="Cardamom View 1"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />

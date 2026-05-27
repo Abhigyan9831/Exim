@@ -195,8 +195,8 @@ export function Contact() {
                     <Mail className="w-6 h-6 text-brand-brown flex-shrink-0 mt-1" />
                     <div>
                       <div className="font-medium text-white">Email</div>
-                      <a href="mailto:mrexim2026@gmail.com" className="text-brand-brown hover:underline text-sm">
-                        mrexim2026@gmail.com
+                      <a href="mailto:info.mrexim@gmail.com" className="text-brand-brown hover:underline text-sm">
+                        info.mrexim@gmail.com
                       </a>
                     </div>
                   </div>
