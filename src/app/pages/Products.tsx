@@ -1,20 +1,252 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { Mountain, Flame, Leaf, Sprout, MapPin, ClipboardList, FileText, Droplet } from "lucide-react";
+import { Flame, Leaf, Sprout, MapPin, ClipboardList, FileText, Droplet, Building2, Globe, Package, Send, ArrowRight, X } from "lucide-react";
 import { ScrollReveal } from "../components/ScrollReveal";
 
 // Easily swap these URLs with your custom product image paths once ready
 const PRODUCT_IMAGES = {
-  view1: "/images/view1.png", // Primary View
-  view2: "/images/view2.png", // Alternative View 1
-  view3: "/images/view3.png", // Alternative View 2
-  view4: "/images/grid4.png",  // Alternative View 3
-  view5: "/images/ChatGPT Image May 23, 2026, 01_23_08 AM.png" // Alternative View 4
+  view1: "/images/view1.webp", // Primary View
+  view2: "/images/view2.webp", // Alternative View 1
+  view3: "/images/view3.webp", // Alternative View 2
+  view4: "/images/grid4.webp",  // Alternative View 3
+  view5: "/images/ChatGPT Image May 23, 2026, 01_23_08 AM.webp" // Alternative View 4
 };
 
+// ─── Inquiry Modal ────────────────────────────────────────────────────────────
+function InquiryModal({ onClose }: { onClose: () => void }) {
+  const [companyName, setCompanyName] = useState("");
+  const [destination, setDestination] = useState("");
+  const [quantity, setQuantity] = useState("1 MT");
+  const [packaging, setPackaging] = useState("Jute Bags");
+  const [submitted, setSubmitted] = useState(false);
+  const overlayRef = useRef<HTMLDivElement>(null);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", handleKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+    setTimeout(() => { onClose(); }, 2200);
+  };
+
+  return (
+    <div
+      ref={overlayRef}
+      id="inquiry-modal-overlay"
+      className="fixed inset-0 z-[999] flex items-center justify-center p-4 sm:p-6"
+      style={{ backgroundColor: "rgba(0,0,0,0.88)" }}
+      onClick={(e) => { if (e.target === overlayRef.current) onClose(); }}
+    >
+      {/* Modal Card */}
+      <div
+        id="inquiry-modal-card"
+        className="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col lg:flex-row"
+        style={{ backgroundColor: "#0a0a0a", animation: "modalSlideIn 0.32s cubic-bezier(0.34,1.4,0.64,1) both" }}
+      >
+        {/* Close Button */}
+        <button
+          id="inquiry-modal-close"
+          onClick={onClose}
+          aria-label="Close inquiry form"
+          className="absolute top-4 right-4 z-20 p-1.5 rounded-full border border-white/15 bg-white/5 hover:bg-white/15 text-white/70 hover:text-white transition-all"
+        >
+          <X className="w-4 h-4" />
+        </button>
+
+        {/* ── Left: Form ── */}
+        <div className="flex-1 p-8 sm:p-10" style={{ animation: "fadeUp 0.38s 0.08s both" }}>
+          {/* Origin badge */}
+          <div className="flex items-center gap-2 mb-5">
+            <MapPin className="h-3.5 w-3.5 text-[#A35C10] flex-shrink-0" />
+            <span className="text-xs text-white/40 tracking-wide">Eastern Himalayas, IN</span>
+            <span className="text-[10px] font-semibold text-[#A35C10] border border-[#A35C10]/50 rounded px-1.5 py-0.5 uppercase tracking-wider">Export Grade</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-[2.6rem] font-bold text-white leading-tight mb-8">
+            Inquire About<br />
+            <span className="text-[#A35C10]">Black Cardamom</span>
+          </h2>
+
+          {submitted ? (
+            <div className="flex flex-col items-center justify-center py-14 text-center" style={{ animation: "fadeUp 0.3s both" }}>
+              <div className="w-14 h-14 rounded-full bg-[#A35C10]/15 border border-[#A35C10]/40 flex items-center justify-center mb-4">
+                <Send className="w-6 h-6 text-[#A35C10]" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-1">Inquiry Sent!</p>
+              <p className="text-white/40 text-sm">Our team will get back to you within 24 hours.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+
+              {/* Company + Destination — connecting-line block */}
+              <div
+                className="relative rounded-xl"
+                style={{ background: "#161616", border: "1px solid rgba(255,255,255,0.08)", animation: "fadeUp 0.38s 0.16s both" }}
+              >
+                {/* Dashed vertical connector — sits between the two icon centres */}
+                <div
+                  className="absolute border-l border-dashed border-white/15"
+                  style={{ left: "2.35rem", top: "3.6rem", bottom: "3.6rem", width: "1px" }}
+                />
+
+                {/* Company Name row */}
+                <div className="relative flex items-center gap-3 px-4 py-3.5">
+                  <div className="z-10 flex-shrink-0 w-8 h-8 rounded-full border border-white/15 bg-[#0a0a0a] flex items-center justify-center">
+                    <Building2 className="h-3.5 w-3.5 text-[#A35C10]" />
+                  </div>
+                  <input
+                    id="inquiry-company"
+                    type="text"
+                    placeholder="Your company name"
+                    value={companyName}
+                    onChange={(e) => setCompanyName(e.target.value)}
+                    required
+                    className="flex-1 bg-transparent text-white text-sm placeholder-white/25 focus:outline-none"
+                    aria-label="Company name"
+                  />
+                </div>
+
+                <div className="mx-14 border-t border-white/[0.07]" />
+
+                {/* Destination row */}
+                <div className="relative flex items-center gap-3 px-4 py-3.5">
+                  <div className="z-10 flex-shrink-0 w-8 h-8 rounded-full border border-white/15 bg-[#0a0a0a] flex items-center justify-center">
+                    <Globe className="h-3.5 w-3.5 text-[#A35C10]" />
+                  </div>
+                  <input
+                    id="inquiry-destination"
+                    type="text"
+                    placeholder="Destination country / port"
+                    value={destination}
+                    onChange={(e) => setDestination(e.target.value)}
+                    required
+                    className="flex-1 bg-transparent text-white text-sm placeholder-white/25 focus:outline-none"
+                    aria-label="Destination country or port"
+                  />
+                </div>
+              </div>
+
+              {/* Quantity + Packaging selectors */}
+              <div className="grid grid-cols-2 gap-3" style={{ animation: "fadeUp 0.38s 0.22s both" }}>
+                <div
+                  className="flex items-center gap-3 rounded-xl px-4 py-3.5"
+                  style={{ background: "#161616", border: "1px solid rgba(255,255,255,0.08)" }}
+                >
+                  <Package className="h-4 w-4 text-[#A35C10] flex-shrink-0" />
+                  <select
+                    id="inquiry-quantity"
+                    value={quantity}
+                    onChange={(e) => setQuantity(e.target.value)}
+                    className="flex-1 bg-transparent text-white text-sm focus:outline-none appearance-none cursor-pointer"
+                    aria-label="Required quantity"
+                    style={{ backgroundColor: "transparent" }}
+                  >
+                    <option value="1 MT" style={{ background: "#161616" }}>1 MT</option>
+                    <option value="5 MT" style={{ background: "#161616" }}>5 MT</option>
+                    <option value="10 MT" style={{ background: "#161616" }}>10 MT</option>
+                    <option value="25 MT" style={{ background: "#161616" }}>25 MT</option>
+                    <option value="50+ MT" style={{ background: "#161616" }}>50+ MT</option>
+                    <option value="Custom" style={{ background: "#161616" }}>Custom</option>
+                  </select>
+                </div>
+
+                <div
+                  className="flex items-center gap-3 rounded-xl px-4 py-3.5"
+                  style={{ background: "#161616", border: "1px solid rgba(255,255,255,0.08)" }}
+                >
+                  <ClipboardList className="h-4 w-4 text-[#A35C10] flex-shrink-0" />
+                  <select
+                    id="inquiry-packaging"
+                    value={packaging}
+                    onChange={(e) => setPackaging(e.target.value)}
+                    className="flex-1 bg-transparent text-white text-sm focus:outline-none appearance-none cursor-pointer"
+                    aria-label="Packaging preference"
+                    style={{ backgroundColor: "transparent" }}
+                  >
+                    <option value="Jute Bags" style={{ background: "#161616" }}>Jute Bags</option>
+                    <option value="PP Woven Bags" style={{ background: "#161616" }}>PP Woven Bags</option>
+                    <option value="Vacuum Sealed" style={{ background: "#161616" }}>Vacuum Sealed</option>
+                    <option value="Custom Packaging" style={{ background: "#161616" }}>Custom Packaging</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Action row */}
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2" style={{ animation: "fadeUp 0.38s 0.28s both" }}>
+                <button
+                  id="inquiry-submit-btn"
+                  type="submit"
+                  className="inline-flex items-center gap-2 px-7 py-3 bg-[#A35C10] text-white text-sm font-semibold rounded-lg hover:bg-[#b8680f] transition-all duration-200 shadow-[0_4px_18px_rgba(163,92,16,0.45)] hover:-translate-y-0.5"
+                >
+                  <Send className="w-3.5 h-3.5" />
+                  Send Inquiry
+                </button>
+                <Link
+                  to="/contact#contact-form"
+                  onClick={onClose}
+                  className="text-sm text-white/35 hover:text-white/70 transition-colors flex items-center gap-1 group"
+                >
+                  Need detailed specs?
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+            </form>
+          )}
+        </div>
+
+        {/* ── Right: Product Image ── */}
+        <div
+          className="hidden lg:block relative w-[42%] flex-shrink-0"
+          style={{ animation: "fadeIn 0.45s 0.12s both" }}
+        >
+          <ImageWithFallback
+            noAnimation
+            src="/images/grid4.webp"
+            alt="Pure Himalayan Black Cardamom"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10 flex flex-col justify-end p-7">
+            <p className="text-[#d8c2aa] text-[10px] font-bold tracking-[0.2em] uppercase mb-1">MR Exim</p>
+            <p className="text-white text-base font-semibold leading-snug">Pure Himalayan<br />Black Cardamom</p>
+            <p className="text-white/40 text-xs mt-2">Eastern Himalayas · Export Grade · Smoke Cured</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Keyframe styles */}
+      <style>{`
+        @keyframes modalSlideIn {
+          from { opacity: 0; transform: scale(0.93) translateY(16px); }
+          to   { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(12px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+        }
+      `}</style>
+    </div>
+  );
+}
+
+// ─── Products Page ─────────────────────────────────────────────────────────────
 export function Products() {
   const [activeImage, setActiveImage] = useState(PRODUCT_IMAGES.view4);
+  const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
   return (
     <div>
@@ -22,7 +254,7 @@ export function Products() {
       <section className="relative h-[100dvh] md:h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback noAnimation
-          src="/images/probg.png"
+          src="/images/probg.webp"
           alt="Our Products Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -62,7 +294,7 @@ export function Products() {
                             <feColorMatrix type="matrix" values="-1 0 0 0 1   0 -1 0 0 1   0 0 -1 0 1   0 0 0 1 0" />
                           </filter>
                           <mask id="mountainMaskProduct">
-                            <image href="/images/WhatsApp Image 2026-05-23 at 00.14.21.jpeg" width="100%" height="100%" filter="url(#invertProduct)" preserveAspectRatio="xMidYMid meet" />
+                            <image href="/images/WhatsApp Image 2026-05-23 at 00.14.21.webp" width="100%" height="100%" filter="url(#invertProduct)" preserveAspectRatio="xMidYMid meet" />
                           </mask>
                         </defs>
                         <rect width="100%" height="100%" fill="currentColor" mask="url(#mountainMaskProduct)" />
@@ -188,13 +420,14 @@ export function Products() {
               </div>
 
               <div className="pt-6">
-                <Link
-                  to="/contact#contact-form"
+                <button
+                  id="inquire-now-btn"
+                  onClick={() => setIsInquiryOpen(true)}
                   className="group relative inline-flex w-full sm:w-auto items-center justify-center px-6 py-3 md:px-10 md:py-4 bg-[#A35C10] text-white text-sm md:text-base font-semibold rounded-lg hover:bg-[#A35C10]/90 transition-all duration-300 uppercase tracking-wider shadow-[0_4px_14px_0_rgba(163,92,16,0.39)] hover:shadow-[0_6px_20px_rgba(163,92,16,0.23)] hover:-translate-y-0.5"
                 >
                   <span className="mr-2">INQUIRE NOW</span>
                   <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
-                </Link>
+                </button>
               </div>
             </div>
 
@@ -313,6 +546,9 @@ export function Products() {
           </Link>
         </div>
       </section>
+
+      {/* Inquiry Popup Modal */}
+      {isInquiryOpen && <InquiryModal onClose={() => setIsInquiryOpen(false)} />}
     </div>
   );
 }

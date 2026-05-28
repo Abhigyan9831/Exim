@@ -13,7 +13,7 @@ export function Home() {
               <feColorMatrix type="matrix" values="-1 0 0 0 1   0 -1 0 0 1   0 0 -1 0 1   0 0 0 1 0" />
             </filter>
             <mask id="mountainMask">
-              <image href="/images/WhatsApp Image 2026-05-23 at 00.14.21.jpeg" width="100%" height="100%" filter="url(#invert)" preserveAspectRatio="xMidYMid meet" />
+              <image href="/images/WhatsApp Image 2026-05-23 at 00.14.21.webp" width="100%" height="100%" filter="url(#invert)" preserveAspectRatio="xMidYMid meet" />
             </mask>
           </defs>
           <rect width="100%" height="100%" fill="currentColor" mask="url(#mountainMask)" />
@@ -46,7 +46,7 @@ export function Home() {
       <section className="relative min-h-[100dvh] md:min-h-[400px] md:aspect-[1647/955] md:max-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden w-full">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
-          src="/images/her.png"
+          src="/images/her.webp"
           alt="M R EXIM Hero Background"
           className="absolute inset-0 w-full h-full object-cover object-[50%_80%] brightness-125 saturate-200"
         />
@@ -88,7 +88,7 @@ export function Home() {
             <div className="flex justify-center lg:justify-start order-1 lg:order-2">
               <div className="relative w-full max-w-[584px] aspect-square overflow-hidden rounded-xl shadow-lg border border-white/10">
                 <ImageWithFallback
-                  src="/images/cardamom_brightness_reduced.png"
+                  src="/images/cardamom_brightness_reduced.webp"
                   alt="Welcome to MR Exim"
                   className="w-full h-full object-cover brightness-75"
                 />
@@ -179,12 +179,12 @@ export function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4 order-1 lg:order-2">
               <ImageWithFallback
-                src="/images/ChatGPT Image May 19, 2026, 11_39_19 PM.png"
+                src="/images/ChatGPT Image May 19, 2026, 11_39_19 PM.webp"
                 alt="M R EXIM Product View 1"
                 className="w-full aspect-square object-cover rounded-lg"
               />
               <ImageWithFallback
-                src="/images/ChatGPT Image May 23, 2026, 01_23_08 AM.png"
+                src="/images/ChatGPT Image May 23, 2026, 01_23_08 AM.webp"
                 alt="M R EXIM Product View 3"
                 className="w-full aspect-square object-cover rounded-lg"
               />

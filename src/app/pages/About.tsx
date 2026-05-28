@@ -26,7 +26,7 @@ export function About() {
       <section className="relative h-[100dvh] md:h-96 flex items-center justify-center overflow-hidden bg-[#030303]">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <ImageWithFallback
-          src="/images/ChatGPT Image May 23, 2026, 01_41_36 AM.png"
+          src="/images/ChatGPT Image May 23, 2026, 01_41_36 AM.webp"
           alt="Black Cardamom Background"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
@@ -52,7 +52,7 @@ export function About() {
             <div className="flex justify-center lg:justify-end w-full">
               <div className="relative w-full max-w-[584px] aspect-square overflow-hidden rounded-xl shadow-lg border border-white/10">
                 <ImageWithFallback
-                  src="/images/black_cardamom_harvesting_square_584x584.png"
+                  src="/images/black_cardamom_harvesting_square_584x584.webp"
                   alt="Who We Are - M R EXIM"
                   className="w-full h-full object-cover"
                 />
@@ -148,14 +148,14 @@ export function About() {
             <div className="grid grid-cols-2 gap-4 w-full order-1 lg:order-2">
               <div className="relative w-full aspect-square overflow-hidden rounded-xl shadow-lg border border-white/10 bg-white/5">
                 <ImageWithFallback
-                  src="/images/ChatGPT Image May 23, 2026, 01_52_40 AM.png"
+                  src="/images/ChatGPT Image May 23, 2026, 01_52_40 AM.webp"
                   alt="Unique Feature 1"
                   className="absolute inset-0 w-full h-full object-cover object-center"
                 />
               </div>
               <div className="relative w-full aspect-square overflow-hidden rounded-xl shadow-lg border border-white/10 bg-white/5">
                 <ImageWithFallback
-                  src="/images/ChatGPT Image May 23, 2026, 02_06_02 AM.png"
+                  src="/images/ChatGPT Image May 23, 2026, 02_06_02 AM.webp"
                   alt="Unique Feature 2"
                   className="absolute inset-0 w-full h-full object-cover object-center"
                 />

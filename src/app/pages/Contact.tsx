@@ -238,12 +238,17 @@ export function Contact() {
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Location</h2>
             <p className="text-sm md:text-lg text-white/80">Visit us at our office in Kolkata</p>
           </div>
-          <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden h-64 md:h-96 flex items-center justify-center">
-            <div className="text-center text-white/60">
-              <MapPin className="w-16 h-16 mx-auto mb-4" />
-              <p className="text-lg font-medium">Map Integration</p>
-              <p className="text-sm">P 209, Lake Town - Block B, Kolkata - 700089</p>
-            </div>
+          <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden h-64 md:h-96">
+            <iframe
+              src="https://maps.google.com/maps?q=P%20209,%20Lake%20Town%20-%20Block%20B,%20Kolkata%20-%20700089,%20West%20Bengal,%20India&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              title="M R EXIM Office Location"
+              className="w-full h-full grayscale invert opacity-80 hover:opacity-100 hover:grayscale-0 hover:invert-0 transition-all duration-500"
+            ></iframe>
           </div>
         </div>
       </section>
