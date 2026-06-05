@@ -101,7 +101,7 @@ export function Contact() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                        placeholder="John Doe"
+                        placeholder="Name"
                       />
                     </div>
                     <div>
@@ -115,7 +115,6 @@ export function Contact() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                        placeholder="john@example.com"
                       />
                     </div>
                   </div>
@@ -131,7 +130,7 @@ export function Contact() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                        placeholder="+91 12345 67890"
+                        placeholder="+xx - ......."
                       />
                     </div>
                     <div>
