@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { Flame, Leaf, Sprout, MapPin, ClipboardList, FileText, Droplet, Building2, Globe, Package, Send, ArrowRight, X } from "lucide-react";
+import { Flame, Leaf, Sprout, MapPin, ClipboardList, FileText, Droplet, Building2, Globe, Package, Send, ArrowRight, X, User, Mail, Phone, MessageSquare, ChevronDown } from "lucide-react";
 import { ScrollReveal } from "../components/ScrollReveal";
 
 // Easily swap these URLs with your custom product image paths once ready
@@ -13,12 +13,21 @@ const PRODUCT_IMAGES = {
   view5: "/images/ChatGPT Image May 23, 2026, 01_23_08 AM.webp" // Alternative View 4
 };
 
+const COUNTRY_LIST = [
+  "Afghanistan|93", "Albania|355", "Algeria|213", "Andorra|376", "Angola|244", "Argentina|54", "Armenia|374", "Australia|61", "Austria|43", "Azerbaijan|994", "Bahamas|1", "Bahrain|973", "Bangladesh|880", "Barbados|1", "Belarus|375", "Belgium|32", "Belize|501", "Benin|229", "Bhutan|975", "Bolivia|591", "Bosnia and Herzegovina|387", "Botswana|267", "Brazil|55", "Brunei|673", "Bulgaria|359", "Burkina Faso|226", "Burundi|257", "Cambodia|855", "Cameroon|237", "Canada|1", "Cape Verde|238", "Chad|235", "Chile|56", "China|86", "Colombia|57", "Comoros|269", "Congo|242", "Costa Rica|506", "Croatia|385", "Cuba|53", "Cyprus|357", "Czech Republic|420", "Denmark|45", "Djibouti|253", "Dominican Republic|1", "Ecuador|593", "Egypt|20", "El Salvador|503", "Equatorial Guinea|240", "Eritrea|291", "Estonia|372", "Eswatini|268", "Ethiopia|251", "Fiji|679", "Finland|358", "France|33", "Gabon|241", "Gambia|220", "Georgia|995", "Germany|49", "Ghana|233", "Greece|30", "Guatemala|502", "Guinea|224", "Haiti|509", "Honduras|504", "Hungary|36", "Iceland|354", "India|91", "Indonesia|62", "Iran|98", "Iraq|964", "Ireland|353", "Israel|972", "Italy|39", "Jamaica|1", "Japan|81", "Jordan|962", "Kazakhstan|7", "Kenya|254", "Kiribati|686", "Kuwait|965", "Kyrgyzstan|996", "Laos|856", "Latvia|371", "Lebanon|961", "Lesotho|266", "Liberia|231", "Libya|218", "Liechtenstein|423", "Lithuania|370", "Luxembourg|352", "Madagascar|261", "Malawi|265", "Malaysia|60", "Maldives|960", "Mali|223", "Malta|356", "Mauritania|222", "Mauritius|230", "Mexico|52", "Moldova|373", "Monaco|377", "Mongolia|976", "Montenegro|382", "Morocco|212", "Mozambique|258", "Myanmar|95", "Namibia|264", "Nepal|977", "Netherlands|31", "New Zealand|64", "Nicaragua|505", "Niger|227", "Nigeria|234", "North Korea|850", "Norway|47", "Oman|968", "Pakistan|92", "Palau|680", "Palestine|970", "Panama|507", "Papua New Guinea|675", "Paraguay|595", "Peru|51", "Philippines|63", "Poland|48", "Portugal|351", "Qatar|974", "Romania|40", "Russia|7", "Rwanda|250", "Samoa|685", "San Marino|378", "Saudi Arabia|966", "Senegal|221", "Serbia|381", "Seychelles|248", "Sierra Leone|232", "Singapore|65", "Slovakia|421", "Slovenia|386", "Somalia|252", "South Africa|27", "South Korea|82", "Spain|34", "Sri Lanka|94", "Sudan|249", "Sweden|46", "Switzerland|41", "Syria|963", "Taiwan|886", "Tajikistan|992", "Tanzania|255", "Thailand|66", "Togo|228", "Tonga|676", "Tunisia|216", "Turkey|90", "Turkmenistan|993", "Uganda|256", "Ukraine|380", "United Arab Emirates|971", "United Kingdom|44", "United States|1", "Uruguay|598", "Uzbekistan|998", "Vanuatu|678", "Vatican City|379", "Venezuela|58", "Vietnam|84", "Yemen|967", "Zambia|260", "Zimbabwe|263"
+];
+
 // ─── Inquiry Modal ────────────────────────────────────────────────────────────
 function InquiryModal({ onClose }: { onClose: () => void }) {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [companyName, setCompanyName] = useState("");
-  const [destination, setDestination] = useState("");
-  const [quantity, setQuantity] = useState("1 MT");
-  const [packaging, setPackaging] = useState("Jute Bags");
+  const [emailAddress, setEmailAddress] = useState("");
+  const [countryCode, setCountryCode] = useState("+1");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [country, setCountry] = useState("");
+  const [address, setAddress] = useState("");
+  const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
 
@@ -88,18 +97,105 @@ function InquiryModal({ onClose }: { onClose: () => void }) {
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
 
-              {/* Company + Destination — connecting-line block */}
+              {/* Client Info Block */}
               <div
-                className="relative rounded-xl"
+                className="relative rounded-xl flex flex-col"
                 style={{ background: "#161616", border: "1px solid rgba(255,255,255,0.08)", animation: "fadeUp 0.38s 0.16s both" }}
               >
-                {/* Dashed vertical connector — sits between the two icon centres */}
+                {/* Dashed vertical connector */}
                 <div
                   className="absolute border-l border-dashed border-white/15"
                   style={{ left: "2.35rem", top: "3.6rem", bottom: "3.6rem", width: "1px" }}
                 />
 
-                {/* Company Name row */}
+                {/* First Name & Last Name row */}
+                <div className="relative flex items-center gap-3 px-4 py-3.5">
+                  <div className="z-10 flex-shrink-0 w-8 h-8 rounded-full border border-white/15 bg-[#0a0a0a] flex items-center justify-center">
+                    <User className="h-3.5 w-3.5 text-[#A35C10]" />
+                  </div>
+                  <div className="flex flex-1 gap-3">
+                    <input
+                      id="inquiry-first-name"
+                      type="text"
+                      placeholder="First name"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      required
+                      className="w-1/2 bg-transparent text-white text-sm placeholder-white/25 focus:outline-none border-r border-white/10 pr-3"
+                      aria-label="First name"
+                    />
+                    <input
+                      id="inquiry-last-name"
+                      type="text"
+                      placeholder="Last name"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      required
+                      className="w-1/2 bg-transparent text-white text-sm placeholder-white/25 focus:outline-none"
+                      aria-label="Last name"
+                    />
+                  </div>
+                </div>
+
+                <div className="mx-14 border-t border-white/[0.07]" />
+
+                {/* Email Address */}
+                <div className="relative flex items-center gap-3 px-4 py-3.5">
+                  <div className="z-10 flex-shrink-0 w-8 h-8 rounded-full border border-white/15 bg-[#0a0a0a] flex items-center justify-center">
+                    <Mail className="h-3.5 w-3.5 text-[#A35C10]" />
+                  </div>
+                  <input
+                    id="inquiry-email"
+                    type="email"
+                    placeholder="Email address"
+                    value={emailAddress}
+                    onChange={(e) => setEmailAddress(e.target.value)}
+                    required
+                    className="flex-1 bg-transparent text-white text-sm placeholder-white/25 focus:outline-none"
+                    aria-label="Email address"
+                  />
+                </div>
+
+                <div className="mx-14 border-t border-white/[0.07]" />
+
+                {/* Phone Number */}
+                <div className="relative flex items-center gap-3 px-4 py-3.5">
+                  <div className="z-10 flex-shrink-0 w-8 h-8 rounded-full border border-white/15 bg-[#0a0a0a] flex items-center justify-center">
+                    <Phone className="h-3.5 w-3.5 text-[#A35C10]" />
+                  </div>
+                  <div className="flex flex-1 items-center gap-2">
+                    <div className="relative flex items-center gap-1 shrink-0">
+                      <span className="text-white text-sm min-w-[1.75rem] text-center">{countryCode}</span>
+                      <ChevronDown className="w-3 h-3 text-white/40" />
+                      <select
+                        value={countryCode}
+                        onChange={(e) => setCountryCode(e.target.value)}
+                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                        aria-label="Select Country Code"
+                      >
+                        {COUNTRY_LIST.map((c) => {
+                          const [name, code] = c.split("|");
+                          return <option key={name} value={`+${code}`} style={{ background: "#161616", color: "white" }}>{name} (+{code})</option>
+                        })}
+                      </select>
+                    </div>
+                    <div className="w-[1px] h-4 bg-white/10 shrink-0" />
+                    <input
+                      id="inquiry-phone"
+                      type="tel"
+                      placeholder="Phone number"
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      required
+                      className="flex-1 min-w-0 bg-transparent text-white text-sm placeholder-white/25 focus:outline-none"
+                      aria-label="Phone number"
+                    />
+                  </div>
+                </div>
+
+                <div className="mx-14 border-t border-white/[0.07]" />
+
+                {/* Company Name (optional) */}
                 <div className="relative flex items-center gap-3 px-4 py-3.5">
                   <div className="z-10 flex-shrink-0 w-8 h-8 rounded-full border border-white/15 bg-[#0a0a0a] flex items-center justify-center">
                     <Building2 className="h-3.5 w-3.5 text-[#A35C10]" />
@@ -107,10 +203,9 @@ function InquiryModal({ onClose }: { onClose: () => void }) {
                   <input
                     id="inquiry-company"
                     type="text"
-                    placeholder="Your company name"
+                    placeholder="Company name (optional)"
                     value={companyName}
                     onChange={(e) => setCompanyName(e.target.value)}
-                    required
                     className="flex-1 bg-transparent text-white text-sm placeholder-white/25 focus:outline-none"
                     aria-label="Company name"
                   />
@@ -118,66 +213,70 @@ function InquiryModal({ onClose }: { onClose: () => void }) {
 
                 <div className="mx-14 border-t border-white/[0.07]" />
 
-                {/* Destination row */}
+                {/* Country (dropdown) */}
                 <div className="relative flex items-center gap-3 px-4 py-3.5">
                   <div className="z-10 flex-shrink-0 w-8 h-8 rounded-full border border-white/15 bg-[#0a0a0a] flex items-center justify-center">
                     <Globe className="h-3.5 w-3.5 text-[#A35C10]" />
                   </div>
+                  <div className="flex-1 relative flex items-center">
+                    <select
+                      id="inquiry-country"
+                      value={country}
+                      onChange={(e) => setCountry(e.target.value)}
+                      required
+                      className={`w-full bg-transparent text-sm focus:outline-none appearance-none cursor-pointer pr-8 ${country ? 'text-white' : 'text-white/25'}`}
+                      aria-label="Country"
+                      style={{ backgroundColor: "transparent" }}
+                    >
+                      <option value="" disabled style={{ background: "#161616", color: "rgba(255,255,255,0.25)" }}>Select your country</option>
+                      {COUNTRY_LIST.map((c) => {
+                        const [name] = c.split("|");
+                        return <option key={name} value={name} style={{ background: "#161616", color: "white" }}>{name}</option>
+                      })}
+                    </select>
+                    <ChevronDown className="absolute right-0 w-4 h-4 text-white/40 pointer-events-none" />
+                  </div>
+                </div>
+
+                <div className="mx-14 border-t border-white/[0.07]" />
+
+                {/* Address */}
+                <div className="relative flex items-center gap-3 px-4 py-3.5">
+                  <div className="z-10 flex-shrink-0 w-8 h-8 rounded-full border border-white/15 bg-[#0a0a0a] flex items-center justify-center">
+                    <MapPin className="h-3.5 w-3.5 text-[#A35C10]" />
+                  </div>
                   <input
-                    id="inquiry-destination"
+                    id="inquiry-address"
                     type="text"
-                    placeholder="Destination country / port"
-                    value={destination}
-                    onChange={(e) => setDestination(e.target.value)}
+                    placeholder="Address"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
                     required
                     className="flex-1 bg-transparent text-white text-sm placeholder-white/25 focus:outline-none"
-                    aria-label="Destination country or port"
+                    aria-label="Address"
                   />
                 </div>
               </div>
 
-              {/* Quantity + Packaging selectors */}
-              <div className="grid grid-cols-2 gap-3" style={{ animation: "fadeUp 0.38s 0.22s both" }}>
-                <div
-                  className="flex items-center gap-3 rounded-xl px-4 py-3.5"
-                  style={{ background: "#161616", border: "1px solid rgba(255,255,255,0.08)" }}
-                >
-                  <Package className="h-4 w-4 text-[#A35C10] flex-shrink-0" />
-                  <select
-                    id="inquiry-quantity"
-                    value={quantity}
-                    onChange={(e) => setQuantity(e.target.value)}
-                    className="flex-1 bg-transparent text-white text-sm focus:outline-none appearance-none cursor-pointer"
-                    aria-label="Required quantity"
-                    style={{ backgroundColor: "transparent" }}
-                  >
-                    <option value="1 MT" style={{ background: "#161616" }}>1 MT</option>
-                    <option value="5 MT" style={{ background: "#161616" }}>5 MT</option>
-                    <option value="10 MT" style={{ background: "#161616" }}>10 MT</option>
-                    <option value="25 MT" style={{ background: "#161616" }}>25 MT</option>
-                    <option value="50+ MT" style={{ background: "#161616" }}>50+ MT</option>
-                    <option value="Custom" style={{ background: "#161616" }}>Custom</option>
-                  </select>
-                </div>
-
-                <div
-                  className="flex items-center gap-3 rounded-xl px-4 py-3.5"
-                  style={{ background: "#161616", border: "1px solid rgba(255,255,255,0.08)" }}
-                >
-                  <ClipboardList className="h-4 w-4 text-[#A35C10] flex-shrink-0" />
-                  <select
-                    id="inquiry-packaging"
-                    value={packaging}
-                    onChange={(e) => setPackaging(e.target.value)}
-                    className="flex-1 bg-transparent text-white text-sm focus:outline-none appearance-none cursor-pointer"
-                    aria-label="Packaging preference"
-                    style={{ backgroundColor: "transparent" }}
-                  >
-                    <option value="Jute Bags" style={{ background: "#161616" }}>Jute Bags</option>
-                    <option value="PP Woven Bags" style={{ background: "#161616" }}>PP Woven Bags</option>
-                    <option value="Vacuum Sealed" style={{ background: "#161616" }}>Vacuum Sealed</option>
-                    <option value="Custom Packaging" style={{ background: "#161616" }}>Custom Packaging</option>
-                  </select>
+              {/* Message Block */}
+              <div
+                className="relative rounded-xl"
+                style={{ background: "#161616", border: "1px solid rgba(255,255,255,0.08)", animation: "fadeUp 0.38s 0.22s both" }}
+              >
+                <div className="relative flex items-start gap-3 px-4 py-3.5">
+                  <div className="z-10 flex-shrink-0 w-8 h-8 mt-1 rounded-full border border-white/15 bg-[#0a0a0a] flex items-center justify-center">
+                    <MessageSquare className="h-3.5 w-3.5 text-[#A35C10]" />
+                  </div>
+                  <textarea
+                    id="inquiry-message"
+                    placeholder="Drop a message... please mention the quantity as well."
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                    rows={3}
+                    className="flex-1 bg-transparent text-white text-sm placeholder-white/25 focus:outline-none resize-none pt-2"
+                    aria-label="Message"
+                  />
                 </div>
               </div>
 
