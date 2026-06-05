@@ -475,7 +475,7 @@ export function Products() {
                     </div>
                     <div>
                       <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Sustainably Grown</h3>
-                      <p className="text-white/70 text-base leading-relaxed">Carefully cultivated by local farmers, supporting rural livelihoods and preserving forest ecosystems.</p>
+                      <p className="text-white/70 text-base leading-relaxed">Naturally cultivated by local farmers, supporting rural livelihoods and preserving forest ecosystems.</p>
                     </div>
                   </div>
                 </ScrollReveal>
