@@ -354,7 +354,7 @@ function InquiryModal({ onClose }: { onClose: () => void }) {
           />
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10 flex flex-col justify-end p-7">
-            <p className="text-[#d8c2aa] text-[10px] font-bold tracking-[0.2em] uppercase mb-1">MR Exim</p>
+            <p className="text-[#d8c2aa] text-[10px] font-bold tracking-[0.2em] uppercase mb-1">M R Exim</p>
             <p className="text-white text-base font-semibold leading-snug">Pure Himalayan<br />Black Cardamom</p>
             <p className="text-white/40 text-xs mt-2">Eastern Himalayas · Export Grade · Smoke Cured</p>
           </div>
@@ -487,7 +487,7 @@ export function Products() {
                     </div>
                     <div>
                       <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Essential Oil Content</h3>
-                      <p className="text-white/70 text-base leading-relaxed">High essential oil content ( 1.5 - 2.5%) is maintained for preserving the authentic aroma of the prod.</p>
+                      <p className="text-white/70 text-base leading-relaxed">High essential oil content (1.5 - 2.5%) is maintained for preserving the authentic aroma of the prod.</p>
                     </div>
                   </div>
                 </ScrollReveal>
