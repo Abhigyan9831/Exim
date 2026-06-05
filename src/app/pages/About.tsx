@@ -126,7 +126,7 @@ export function About() {
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <div>
-                  <strong className="text-[#A35C10]">Low-Smoke Curing</strong>: Low-smoke curing techniques used to preserve the smoke aroma and authenticity of the product.
+                  <strong className="text-[#A35C10]">Smoke Cured</strong>: Moisture stabilising techniques used to preserve the smoke aroma and authenticity of the product.
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={200}>
@@ -141,7 +141,7 @@ export function About() {
               </ScrollReveal>
               <ScrollReveal delay={400}>
                 <div>
-                  <strong className="text-[#A35C10]">Traceable Quality</strong>: Promoting naturally cultivated Himalayan Cardamom with traceability and export-quality standards.
+                  <strong className="text-[#A35C10]">Traceable Quality</strong>: Promoting naturally cultivated Pure Himalayan Cardamom with traceability and export-quality standards.
                 </div>
               </ScrollReveal>
             </div>
