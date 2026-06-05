@@ -71,7 +71,7 @@ export function About() {
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Mission</h2>
               <p className="text-center sm:text-left text-sm md:text-lg text-white">
-                To deliver mountain-grown, authentic spices from India to global markets, while empowering rural livelihoods.
+                To deliver mountain-grown, authentic spices from India to global markets while empowering rural livelihoods.
               </p>
             </div>
             <div className="bg-white/5 p-6 md:p-8 rounded-xl border border-white/10 shadow-sm text-center md:text-left">
