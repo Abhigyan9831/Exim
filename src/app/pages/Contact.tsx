@@ -23,18 +23,46 @@ export function Contact() {
     }
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for your inquiry! We will get back to you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      inquiryType: "general",
-      message: ""
-    });
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch(
+        "https://darkgray-curlew-850665.hostingersite.com/wp-json/mrexim/v1/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            first_name: formData.name.split(" ")[0],
+            last_name: formData.name.split(" ").slice(1).join(" ") || "-",
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company,
+            subject: formData.inquiryType,
+            message: formData.message,
+          }),
+        }
+      );
+
+      const data = await res.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", phone: "", company: "", inquiryType: "general", message: "" });
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Network error. Please check your connection.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleWhatsApp = () => {
@@ -156,12 +184,16 @@ export function Contact() {
                     />
                   </div>
 
+                  {error && <p className="text-red-400 text-sm">{error}</p>}
+                  {submitted && <p className="text-green-400 text-sm">Thank you! We'll get back to you soon.</p>}
+
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-brand-brown text-white rounded-lg font-semibold hover:bg-brand-brown transition-colors flex items-center justify-center gap-2 text-sm md:text-base"
+                    disabled={isLoading}
+                    className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-brand-brown text-white rounded-lg font-semibold hover:bg-brand-brown transition-colors flex items-center justify-center gap-2 text-sm md:text-base disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <Send className="w-5 h-5" />
-                    Send Message
+                    {isLoading ? "Sending..." : "Send Message"}
                   </button>
                 </form>
               </div>
