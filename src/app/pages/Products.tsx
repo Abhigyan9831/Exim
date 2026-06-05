@@ -451,7 +451,7 @@ export function Products() {
                     </div>
                     <div>
                       <h3 className="text-[#d8c2aa] font-semibold text-lg mb-1.5">Smoke Cured</h3>
-                      <p className="text-white/70 text-base leading-relaxed">Processed under controlled conditions and dried over an open fire.</p>
+                      <p className="text-white/70 text-base leading-relaxed">Processed under controlled conditions and dried over open fires.</p>
                     </div>
                   </div>
                 </ScrollReveal>
