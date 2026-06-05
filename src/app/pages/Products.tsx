@@ -42,10 +42,46 @@ function InquiryModal({ onClose }: { onClose: () => void }) {
     };
   }, [onClose]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => { onClose(); }, 2200);
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch(
+        "https://darkgray-curlew-850665.hostingersite.com/wp-json/mrexim/v1/inquiry",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            first_name: firstName,
+            last_name: lastName,
+            email: emailAddress,
+            phone: `${countryCode}${phoneNumber}`,
+            company: companyName,
+            country: country,
+            address: address,
+            message: message,
+          }),
+        }
+      );
+
+      const data = await res.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setTimeout(() => { onClose(); }, 2200);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Network error. Please check your connection.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -281,14 +317,16 @@ function InquiryModal({ onClose }: { onClose: () => void }) {
               </div>
 
               {/* Action row */}
+              {error && <p className="text-red-400 text-xs">{error}</p>}
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2" style={{ animation: "fadeUp 0.38s 0.28s both" }}>
                 <button
                   id="inquiry-submit-btn"
                   type="submit"
-                  className="inline-flex items-center gap-2 px-7 py-3 bg-[#A35C10] text-white text-sm font-semibold rounded-lg hover:bg-[#b8680f] transition-all duration-200 shadow-[0_4px_18px_rgba(163,92,16,0.45)] hover:-translate-y-0.5"
+                  disabled={isLoading}
+                  className="inline-flex items-center gap-2 px-7 py-3 bg-[#A35C10] text-white text-sm font-semibold rounded-lg hover:bg-[#b8680f] transition-all duration-200 shadow-[0_4px_18px_rgba(163,92,16,0.45)] hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <Send className="w-3.5 h-3.5" />
-                  Send Inquiry
+                  {isLoading ? "Sending..." : "Send Inquiry"}
                 </button>
                 <Link
                   to="/contact#contact-form"
