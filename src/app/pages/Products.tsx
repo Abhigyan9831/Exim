@@ -522,7 +522,7 @@ export function Products() {
                           <ScrollReveal delay={800}>
                             <li className="flex flex-col sm:flex-row sm:items-center justify-between py-3 border-b border-white/5 last:border-0 gap-1 sm:gap-4">
                               <span className="text-white/50 text-xs font-bold tracking-wider uppercase">Quality</span>
-                              <span className="text-white/90 font-medium text-sm sm:text-right">Export Grade</span>
+                              <span className="text-white/90 font-medium text-sm sm:text-right">Export Grades</span>
                             </li>
                           </ScrollReveal>
                           <ScrollReveal delay={900}>
