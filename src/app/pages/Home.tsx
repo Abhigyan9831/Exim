@@ -1,10 +1,9 @@
 import { Link } from "react-router";
 import { useEffect, useState } from "react";
-import { Content, fetchOneEntry, isPreviewing } from "@builder.io/sdk-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Users, Leaf, Award, ArrowRight, Globe2, ShieldCheck, Droplet } from "lucide-react";
 import { ScrollReveal } from "../components/ScrollReveal";
-import { BUILDER_PUBLIC_KEY, customComponents } from "../builder";
+import { fetchPageBySlug } from "../wordpress";
 
 interface HeroProps {
   title?: string;
@@ -309,48 +308,42 @@ export function ReadyToPartnerSection({
 }
 
 export function Home() {
-  const [builderContent, setBuilderContent] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+  const [wpData, setWpData] = useState<any>(null);
 
   useEffect(() => {
-    fetchOneEntry({
-      model: "page",
-      apiKey: BUILDER_PUBLIC_KEY,
-      userAttributes: {
-        urlPath: "/",
-      },
-    })
-      .then((content) => {
-        setBuilderContent(content);
-      })
-      .catch((err) => {
-        console.error("Builder.io content fetch failed:", err);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    fetchPageBySlug("home").then((page) => {
+      if (page && page.acf) {
+        setWpData(page.acf);
+      }
+    });
   }, []);
 
-  // If Builder content is fetched or we are previewing in Builder.io, let Builder render the registered components
-  if (builderContent || isPreviewing()) {
-    return (
-      <Content
-        model="page"
-        content={builderContent}
-        apiKey={BUILDER_PUBLIC_KEY}
-        customComponents={customComponents}
-      />
-    );
-  }
-
-  // Fallback to default hardcoded page structure
   return (
     <div>
-      <HeroSection />
-      <WelcomeSection />
-      <WhyChooseSection />
-      <OurProductSection />
-      <ReadyToPartnerSection />
+      <HeroSection 
+        title={wpData?.hero_title}
+        subtitle={wpData?.hero_subtitle}
+        image={wpData?.hero_image}
+      />
+      <WelcomeSection 
+        title={wpData?.welcome_title}
+        description={wpData?.welcome_description}
+        image={wpData?.welcome_image}
+      />
+      <WhyChooseSection 
+        title={wpData?.why_choose_title}
+        subtitle={wpData?.why_choose_subtitle}
+      />
+      <OurProductSection 
+        title={wpData?.product_title}
+        productName={wpData?.product_name}
+        image1={wpData?.product_image_1}
+        image2={wpData?.product_image_2}
+      />
+      <ReadyToPartnerSection 
+        title={wpData?.partner_title}
+        subtitle={wpData?.partner_subtitle}
+      />
     </div>
   );
 }
