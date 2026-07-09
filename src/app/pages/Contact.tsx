@@ -1,7 +1,36 @@
 import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Clock, MessageCircle, Send } from "lucide-react";
+import { fetchPageBySlug } from "../wordpress";
 
 export function Contact() {
+  const [wpData, setWpData] = useState<any>(null);
+
+  useEffect(() => {
+    fetchPageBySlug("contact").then((page) => {
+      if (page && page.acf) {
+        setWpData(page.acf);
+      }
+    });
+  }, []);
+
+  const d = {
+    heroTitle: wpData?.hero_title || "Contact Us",
+    heroSubtitle: wpData?.hero_subtitle || "Get in touch with our team for inquiries, quotes, and partnerships",
+    formTitle: wpData?.form_title || "Send Us a Message",
+    infoTitle: wpData?.info_title || "Contact Information",
+    address: wpData?.address || "P 209, Lake Town - Block B\nKolkata - 700089\nWest Bengal, India",
+    phone: wpData?.phone || "+91 8334049664",
+    email: wpData?.email || "info.mrexim@gmail.com",
+    quickConnectTitle: wpData?.quick_connect_title || "Quick Connect",
+    quickConnectDesc: wpData?.quick_connect_desc || "Have an urgent inquiry? Chat with us directly on WhatsApp for quick responses.",
+    leadershipTitle: wpData?.leadership_title || "Leadership Contact",
+    leaderName: wpData?.leader_name || "Shoshi Mitra",
+    leaderRole: wpData?.leader_role || "Available for partnership discussions",
+    locationTitle: wpData?.location_title || "Our Location",
+    locationSubtitle: wpData?.location_subtitle || "Visit us at our office in Kolkata",
+    mapQuery: wpData?.map_query || "P 209, Lake Town - Block B, Kolkata - 700089, West Bengal, India",
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -67,7 +96,7 @@ export function Contact() {
 
   const handleWhatsApp = () => {
     const message = "Hello M R EXIM, I would like to inquire about your products.";
-    const whatsappUrl = `https://wa.me/918334049664?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${d.phone.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -75,9 +104,9 @@ export function Contact() {
     <div>
       <section className="bg-brand-brown text-black py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">{d.heroTitle}</h1>
           <p className="text-sm md:text-xl text-black/80">
-            Get in touch with our team for inquiries, quotes, and partnerships
+            {d.heroSubtitle}
           </p>
         </div>
       </section>
@@ -87,7 +116,7 @@ export function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <div className="bg-white/5 border border-white/10 rounded-xl p-8 shadow-sm">
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">{d.formTitle}</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
@@ -200,16 +229,14 @@ export function Contact() {
 
             <div className="space-y-6">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-white mb-4">Contact Information</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{d.infoTitle}</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <MapPin className="w-6 h-6 text-brand-brown flex-shrink-0 mt-1" />
                     <div>
                       <div className="font-medium text-white">Address</div>
-                      <div className="text-white/80 text-sm">
-                        P 209, Lake Town - Block B<br />
-                        Kolkata - 700089<br />
-                        West Bengal, India
+                      <div className="text-white/80 text-sm whitespace-pre-line">
+                        {d.address}
                       </div>
                     </div>
                   </div>
@@ -217,8 +244,8 @@ export function Contact() {
                     <Phone className="w-6 h-6 text-brand-brown flex-shrink-0 mt-1" />
                     <div>
                       <div className="font-medium text-white">Phone</div>
-                      <a href="tel:8334049664" className="text-brand-brown hover:underline text-sm">
-                        +91 8334049664
+                      <a href={`tel:${d.phone}`} className="text-brand-brown hover:underline text-sm">
+                        {d.phone}
                       </a>
                     </div>
                   </div>
@@ -226,8 +253,8 @@ export function Contact() {
                     <Mail className="w-6 h-6 text-brand-brown flex-shrink-0 mt-1" />
                     <div>
                       <div className="font-medium text-white">Email</div>
-                      <a href="mailto:info.mrexim@gmail.com" className="text-brand-brown hover:underline text-sm">
-                        info.mrexim@gmail.com
+                      <a href={`mailto:${d.email}`} className="text-brand-brown hover:underline text-sm">
+                        {d.email}
                       </a>
                     </div>
                   </div>
@@ -237,10 +264,10 @@ export function Contact() {
               <div className="bg-gradient-to-br from-green-600 to-green-700 text-white rounded-xl p-6 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
                   <MessageCircle className="w-8 h-8" />
-                  <h3 className="text-xl font-bold">Quick Connect</h3>
+                  <h3 className="text-xl font-bold">{d.quickConnectTitle}</h3>
                 </div>
                 <p className="text-center sm:text-left mb-4 text-green-50">
-                  Have an urgent inquiry? Chat with us directly on WhatsApp for quick responses.
+                  {d.quickConnectDesc}
                 </p>
                 <button
                   onClick={handleWhatsApp}
@@ -252,10 +279,10 @@ export function Contact() {
               </div>
 
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-white mb-3">Leadership Contact</h3>
+                <h3 className="text-lg font-bold text-white mb-3">{d.leadershipTitle}</h3>
                 <div className="space-y-2">
-                  <div className="text-white font-medium">Shoshi Mitra</div>
-                  <div className="text-sm text-brand-brown">Available for partnership discussions</div>
+                  <div className="text-white font-medium">{d.leaderName}</div>
+                  <div className="text-sm text-brand-brown">{d.leaderRole}</div>
                 </div>
               </div>
             </div>
@@ -266,12 +293,12 @@ export function Contact() {
       <section className="py-8 md:py-12 bg-brand-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Location</h2>
-            <p className="text-sm md:text-lg text-white/80">Visit us at our office in Kolkata</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">{d.locationTitle}</h2>
+            <p className="text-sm md:text-lg text-white/80">{d.locationSubtitle}</p>
           </div>
           <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden h-64 md:h-96">
             <iframe
-              src="https://maps.google.com/maps?q=P%20209,%20Lake%20Town%20-%20Block%20B,%20Kolkata%20-%20700089,%20West%20Bengal,%20India&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(d.mapQuery)}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
               width="100%"
               height="100%"
               style={{ border: 0 }}

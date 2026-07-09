@@ -1,22 +1,43 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import { Award, ShieldCheck, FileCheck, Leaf, Users, Globe2, ArrowRight } from "lucide-react";
+import { Award, ShieldCheck, Leaf, ArrowRight } from "lucide-react";
+import { fetchPageBySlug } from "../wordpress";
 
 export function Certifications() {
+  const [wpData, setWpData] = useState<any>(null);
+
+  useEffect(() => {
+    fetchPageBySlug("certifications").then((page) => {
+      if (page && page.acf) {
+        setWpData(page.acf);
+      }
+    });
+  }, []);
+
+  const d = {
+    heroTitle: wpData?.hero_title || "Certifications",
+    heroSubtitle: wpData?.hero_subtitle || "Committed to the highest standards of quality, safety, and sustainability",
+    title: wpData?.title || "Our Certifications",
+    subtitle: wpData?.subtitle || "We maintain rigorous certifications to ensure our products meet international quality and safety standards",
+    partnerTitle: wpData?.partner_title || "Ready to Partner With Us?",
+    partnerSubtitle: wpData?.partner_subtitle || "Get in touch today to discuss your specialty agricultural commodity needs",
+  };
+
   const certifications = [
     {
       icon: <Award className="w-12 h-12" />,
-      name: "ISO 22000:2018",
-      status: "Certified"
+      name: wpData?.cert_1_name || "ISO 22000:2018",
+      status: wpData?.cert_1_status || "Certified"
     },
     {
       icon: <Leaf className="w-12 h-12" />,
-      name: "APEDA",
-      status: "Certified"
+      name: wpData?.cert_2_name || "APEDA",
+      status: wpData?.cert_2_status || "Certified"
     },
     {
       icon: <ShieldCheck className="w-12 h-12" />,
-      name: "FSSAI",
-      status: "Active"
+      name: wpData?.cert_3_name || "FSSAI",
+      status: wpData?.cert_3_status || "Active"
     }
   ];
 
@@ -24,9 +45,9 @@ export function Certifications() {
     <div>
       <section className="bg-brand-brown text-black py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">Certifications</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">{d.heroTitle}</h1>
           <p className="text-sm md:text-xl text-black/80">
-            Committed to the highest standards of quality, safety, and sustainability
+            {d.heroSubtitle}
           </p>
         </div>
       </section>
@@ -35,10 +56,10 @@ export function Certifications() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
-              Our Certifications
+              {d.title}
             </h2>
             <p className="text-sm md:text-xl text-white max-w-3xl mx-auto">
-              We maintain rigorous certifications to ensure our products meet international quality and safety standards
+              {d.subtitle}
             </p>
           </div>
 
@@ -68,10 +89,18 @@ export function Certifications() {
       <section className="py-3 md:py-4 pb-12 md:pb-16 bg-brand-grey shadow-inner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
-            Ready to Partner <span className="text-[#A35C10]">With Us</span>?
+            {d.partnerTitle.includes("With Us") ? (
+              <>
+                {d.partnerTitle.split("With Us")[0]}
+                <span className="text-[#A35C10]">With Us</span>
+                {d.partnerTitle.split("With Us")[1]}
+              </>
+            ) : (
+              d.partnerTitle
+            )}
           </h2>
           <p className="text-sm md:text-xl text-white mb-8 max-w-2xl mx-auto">
-            Get in touch today to discuss your specialty agricultural commodity needs
+            {d.partnerSubtitle}
           </p>
           <Link
             to="/contact"
